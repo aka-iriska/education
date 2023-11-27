@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <ProjectSession>
+    <PathDelim Value="\"/>
+    <Version Value="12"/>
+    <BuildModes Active="Default"/>
+    <Units>
+      <Unit>
+        <Filename Value="pro.lpr"/>
+        <IsPartOfProject Value="True"/>
+        <IsVisibleTab Value="True"/>
+        <CursorPos X="2"/>
+        <UsageCount Value="20"/>
+        <Loaded Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="main.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="Form1"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <EditorIndex Value="1"/>
+        <TopLine Value="70"/>
+        <CursorPos Y="78"/>
+        <UsageCount Value="20"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="maxproduct.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="Form2"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <EditorIndex Value="2"/>
+        <TopLine Value="26"/>
+        <CursorPos X="61" Y="37"/>
+        <UsageCount Value="20"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="howmuchbuy.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="Form3"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <EditorIndex Value="3"/>
+        <TopLine Value="34"/>
+        <CursorPos X="15" Y="41"/>
+        <UsageCount Value="20"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="ben.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="Form4"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <EditorIndex Value="4"/>
+        <TopLine Value="35"/>
+        <CursorPos X="5" Y="62"/>
+        <UsageCount Value="20"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="table.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="Form5"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <EditorIndex Value="5"/>
+        <TopLine Value="35"/>
+        <CursorPos X="19" Y="39"/>
+        <UsageCount Value="20"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="base.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="Form6"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <EditorIndex Value="6"/>
+        <CursorPos X="7" Y="18"/>
+        <UsageCount Value="20"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="C:\lazarus\components\tachart\tacustomseries.pas"/>
+        <UnitName Value="TACustomSeries"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="816"/>
+        <CursorPos Y="829"/>
+        <UsageCount Value="10"/>
+      </Unit>
+      <Unit>
+        <Filename Value="C:\lazarus\lcl\include\control.inc"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="2945"/>
+        <CursorPos Y="2961"/>
+        <UsageCount Value="10"/>
+      </Unit>
+      <Unit>
+        <Filename Value="C:\lazarus\lcl\include\buttoncontrol.inc"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="6"/>
+        <CursorPos Y="21"/>
+        <UsageCount Value="10"/>
+      </Unit>
+      <Unit>
+        <Filename Value="C:\lazarus\lcl\include\buttons.inc"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="157"/>
+        <CursorPos Y="170"/>
+        <UsageCount Value="10"/>
+      </Unit>
+      <Unit>
+        <Filename Value="C:\lazarus\lcl\include\wincontrol.inc"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="5418"/>
+        <CursorPos Y="5430"/>
+        <UsageCount Value="10"/>
+      </Unit>
+      <Unit>
+        <Filename Value="C:\lazarus\lcl\lclmessageglue.pas"/>
+        <UnitName Value="LCLMessageGlue"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="100"/>
+        <CursorPos Y="112"/>
+        <UsageCount Value="10"/>
+      </Unit>
+      <Unit>
+        <Filename Value="C:\lazarus\lcl\interfaces\win32\win32callback.inc"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="2758"/>
+        <CursorPos Y="2772"/>
+        <UsageCount Value="10"/>
+      </Unit>
+      <Unit>
+        <Filename Value="C:\lazarus\lcl\interfaces\win32\win32wsforms.pp"/>
+        <UnitName Value="Win32WSForms"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="385"/>
+        <CursorPos X="33" Y="391"/>
+        <UsageCount Value="10"/>
+      </Unit>
+      <Unit>
+        <Filename Value="C:\lazarus\lcl\include\application.inc"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="1367"/>
+        <CursorPos X="70" Y="1382"/>
+        <UsageCount Value="10"/>
+      </Unit>
+      <Unit>
+        <Filename Value="C:\lazarus\lcl\include\interfacebase.inc"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="39"/>
+        <CursorPos X="28" Y="46"/>
+        <UsageCount Value="10"/>
+      </Unit>
+    </Units>
+    <JumpHistory HistoryIndex="20">
+      <Position>
+        <Filename Value="table.pas"/>
+        <Caret Line="47" TopLine="36"/>
+      </Position>
+      <Position>
+        <Filename Value="table.pas"/>
+        <Caret Line="48" TopLine="36"/>
+      </Position>
+      <Position>
+        <Filename Value="table.pas"/>
+        <Caret Line="67" Column="21" TopLine="45"/>
+      </Position>
+      <Position>
+        <Filename Value="table.pas"/>
+        <Caret Line="65" TopLine="45"/>
+      </Position>
+      <Position>
+        <Filename Value="table.pas"/>
+        <Caret Line="66" Column="55" TopLine="45"/>
+      </Position>
+      <Position>
+        <Filename Value="table.pas"/>
+        <Caret Line="65" TopLine="45"/>
+      </Position>
+      <Position>
+        <Filename Value="table.pas"/>
+        <Caret Line="66" TopLine="45"/>
+      </Position>
+      <Position>
+        <Filename Value="table.pas"/>
+        <Caret Line="64" TopLine="45"/>
+      </Position>
+      <Position>
+        <Filename Value="table.pas"/>
+        <Caret Line="65" TopLine="45"/>
+      </Position>
+      <Position>
+        <Filename Value="table.pas"/>
+        <Caret Line="66" TopLine="45"/>
+      </Position>
+      <Position>
+        <Filename Value="table.pas"/>
+        <Caret Line="64" TopLine="45"/>
+      </Position>
+      <Position>
+        <Filename Value="table.pas"/>
+        <Caret Line="65" TopLine="45"/>
+      </Position>
+      <Position>
+        <Filename Value="table.pas"/>
+        <Caret Line="66" TopLine="45"/>
+      </Position>
+      <Position>
+        <Filename Value="table.pas"/>
+        <Caret Line="64" TopLine="45"/>
+      </Position>
+      <Position>
+        <Filename Value="table.pas"/>
+        <Caret Line="39" TopLine="24"/>
+      </Position>
+      <Position>
+        <Filename Value="table.pas"/>
+        <Caret Line="68" TopLine="47"/>
+      </Position>
+      <Position>
+        <Filename Value="table.pas"/>
+        <Caret Line="62" Column="14" TopLine="47"/>
+      </Position>
+      <Position>
+        <Filename Value="table.pas"/>
+        <Caret Line="63" Column="41" TopLine="50"/>
+      </Position>
+      <Position>
+        <Filename Value="table.pas"/>
+        <Caret Line="62" Column="41" TopLine="49"/>
+      </Position>
+      <Position>
+        <Filename Value="pro.lpr"/>
+        <Caret Column="2"/>
+      </Position>
+      <Position>
+        <Filename Value="main.pas"/>
+        <Caret Line="90" Column="18" TopLine="81"/>
+      </Position>
+    </JumpHistory>
+    <RunParams>
+      <FormatVersion Value="2"/>
+      <Modes ActiveMode=""/>
+    </RunParams>
+  </ProjectSession>
+  <Debugging>
+    <Watches>
+      <Item>
+        <Expression Value="aa[1, j]"/>
+      </Item>
+      <Item>
+        <Expression Value="aa[2, j]"/>
+      </Item>
+      <Item>
+        <Expression Value="aa[3, j]"/>
+      </Item>
+      <Item>
+        <Expression Value="aa[4, j]"/>
+      </Item>
+    </Watches>
+  </Debugging>
+</CONFIG>

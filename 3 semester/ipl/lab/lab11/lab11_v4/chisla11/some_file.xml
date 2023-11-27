@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<?xml-stylesheet type="text/xsl" href="some_transformer.xslt"?>
+<catalog>
+  <cd>
+    <former>1 5 6</former>
+    <res_string>2 10</res_string>
+    <my_t>+</my_t>
+  </cd>
+  <cd>
+    <former>1 5 6</former>
+    <res_string>2 10</res_string>
+    <my_t>+</my_t>
+  </cd>
+</catalog>

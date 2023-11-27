@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="ru" dir="ltr">
+<head>
+ <meta charset="utf-8" />
+ <meta http-equiv="X-UA-Compatible" content="IE=edge">
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+ <title>ICS6 Bootstrap</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+<style>
+ .my-primary {
+ background-color: #EC80FF;
+ }
+ html {
+ position: relative;
+ min-height: 100%;
+ }
+ body {
+ margin-bottom: 40px;
+ }
+main {
+margin-top: 20px;
+}
+ footer {
+ height: 40px;
+ position: absolute;
+ bottom: 0;
+ width: 100%;
+ }
+ .redpr {
+ color: red;
+font-weight: bold;}
+.pr{
+color:blue;
+font-size:20px;
+ }
+.imp{
+font-style: oblique;
+font-size:15px;
+}
+table,tr, td, th{border: 1px solid black;}
+</style>
+</head>
+<body>
+	<header>
+	<nav class="navbar navbar-expand-lg navbar-dark my-primary">
+ 	<a class="navbar-brand" href="#">Navbar</a>
+ <ul class="navbar-nav mr-auto">
+ <li class="nav-item active">
+ <a class="nav-link" href="#">Home
+ <span class="sr-only">(current)</span>
+ </a>
+ </li>
+ <li class="nav-item">
+ <a class="nav-link" href="#">Link</a>
+ </li>
+ </ul>
+ </nav>
+</header>
+<main class="container" role="main">
+ <div class="row">
+ <div class="col-4">
+ <img src="https://e-learning.bmstu.ru/iu6/pluginfile.php/16893/mod_resource/content/1/avatar.jpeg" alt="avatar" width="150" height="150">
+ </div>
+ </div>
+<div class="row">
+ <div class="col-4">
+<!--Форма-->
+<table>
+<tr>
+	<th colspan="2">Регистрация</th>
+</tr>
+<tr>
+	<td>Введите имя</td>
+	<td><input type="text" name="name" placeholder="Иван"></td>
+</tr>
+<tr>
+	<td>Введите фамилию</td>
+	<td><input type="text" name="surname" placeholder="Иванов"></td>
+</tr>
+<tr>
+	<td>Укажите почту</td>
+	<td><input type="text" name="email" placeholder="******@gmail.com"></td>
+</tr>
+<tr>
+	<td>Укажите возраст</td>
+	<td><input type="text" name="age" placeholder="30">
+</tr>
+<tr>
+	<td>Укажите пол</td>
+	<td>
+	<input type="radio" name="gender" value="m"> М
+	<input type="radio" name="gender" value="f"> Ж
+	<input type="radio" name="gender" value="non" checked> не указывать
+	</td>
+</tr>
+<tr>
+	<td>Введите пароль</td>
+	<td><input type="password" name="password"></td>
+</tr>
+<tr>
+	<th colspan="2">
+	<button type="submit" name="button" value="finish">Завершить
+	</button>
+	</th>
+</tr>
+</table>
+ </div>
+ <div class="col-4">
+<!--Таблица-->
+<table>
+<tr>
+	<th rowspan="5">Среда</th>
+	<th>Время</th>
+	<th>ЧС</th>
+	<th>ЗН</th>
+</tr>
+<tr>
+	<td>8:30-10:05</td>
+	<td>Физика 323</td>
+	<td>Физика 520</td>
+</tr>
+<tr>
+	<td>10:15-11:50</td>
+	<td colspan="2"> Электротехника 513ю </td>
+</tr>
+<tr>
+	<td>12:00-13:35</td>
+	<td>Элеткротехника 520 </td>
+	<td> </td>
+</tr>
+<tr>
+	<td>13:50-15:25</td>
+	<td colspan="2">ФВ</td>
+</tr>
+</table>
+ </div>
+ </div>
+ <div class="row">
+ <div class="col">
+<!--Текст-->
+<pre>
+Правила <span class="redpr">Бойцовского клуба</span>: 
+-<span class="pr">Первое правило</span> Бойцовского клуба: <span class="imp">не упоминать </span>о <span class="redpr">Бойцовском клубе</span>
+-<span class="pr">Второе правило </span>Бойцовского клуба: <span class="imp"> не упоминать</span> нигде о <span class="redpr">Бойцовском клубе</span>
+-<span class="pr">Третье правило </span>Бойцовского клуба: боец крикнул <span class="imp">«стоп»</span>, 
+выдохся, отключился — бой окончен
+-<span class="pr">Четвертое</span>: в бою участвуют лишь <span class="imp">двое</span>
+-<span class="pr">Пятое</span>: бои идут один за другим
+-<span class="pr">Шестое</span>: снимать обувь и рубашки
+-<span class="pr">Седьмое</span>: бой продолжается столько, сколько <span class="imp">нужно</span>
+-<span class="pr">Восьмое и последнее</span>: тот, кто впервые пришёл в клуб — <span class="imp">примет бой</span>
+</pre>
+ </div>
+ </div>
+ </main>
+ <footer class="my-primary">
+ <div class="container">
+ <p class="footer-text">Footer</p>
+ </div>
+ </footer>
+</body>
+</html>

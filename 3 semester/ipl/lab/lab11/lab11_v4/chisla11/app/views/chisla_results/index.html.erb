@@ -1,0 +1,14 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Chisla results</h1>
+
+<div id="chisla_results">
+  <% @chisla_results.each do |chisla_result| %>
+    <%= render chisla_result %>
+    <p>
+      <%= link_to "Show this chisla result", chisla_result %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "New chisla result", new_chisla_result_path %>

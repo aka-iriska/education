@@ -1,0 +1,28 @@
+<h1>TwinsProxy#input</h1>
+
+<div>
+  <p>
+    <a href="<%= url_for(only_path: false) + '.html.erb' %>">Мы находимся по
+      адресу: <%= url_for(only_path: false) + '.html.erb' %></a>
+  </p>
+
+  <div>
+    <input type="radio" id="server_radio" name="selector" value="1" />
+    <label for="server_radio">Серверный обработчик</label>
+
+    <input type="radio" id="client_radio" name="selector" value="2" />
+    <label for="client_radio">Клиентский обработчки</label>
+  </div>
+
+  <br>
+
+  <form action="" method="get" id="calc_form" accept-charset="UTF-8" data-remote="false">
+    <label for="n">
+      <input type="number" id="n" name="n" min="0" minlength="1" oninput="this.value = Math.abs(this.value);" required />
+    </label>
+    <input id="xslt" name="commit" type="submit" value="XML+XSLT" />
+    <input id="xml" name="commit" type="submit" value="XML" />
+  </form>
+
+  <div id="result"></div>
+</div>

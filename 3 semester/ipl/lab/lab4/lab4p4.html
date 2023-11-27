@@ -1,0 +1,115 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Лабораторная работа 4 пункт 4</title>
+    <script type="text/javascript">
+        function add(n, oper) {
+            var array = document.getElementById("base");
+            var cell = array.rows.item(n).cells;
+            var curr = cell.item(2).innerHTML;
+            if (oper == '+') { var newcount = Number(curr) + 1; }
+            //счёт от 0
+            if (oper == '-') { var newcount = Number(curr) - 1; }
+            //изменение колчиества
+            if (newcount >= 0) document.getElementById("base").rows.item(n).cells.item(2).innerHTML = String(newcount);
+            else newcount = 0;
+            //добавление в таблицу формирования заказа
+            resultarray = document.getElementById("result");
+            resultRowLength = resultarray.rows.length;
+            var f = false;
+            var i = 1;//начинаем без заголовка
+            //есть ли уже этот товар в корзине
+            var rownumb = 0;
+            while (f == false && resultarray.rows.item(i)!=null) {
+                if (cell.item(0).innerHTML == resultarray.rows.item(i).cells.item(0).innerHTML) {
+                    f = true;
+                    rownumb = i;
+                }
+                i += 1;
+            }
+            if (f == false) {
+                if (newcount != 0) {
+                    document.getElementById("result").innerHTML += "<tr><td>" + cell.item(0).innerHTML +
+                        `</td><td>`
+                        + cell.item(1).innerHTML + "</td><td>" + String(newcount) + "</td></tr>";
+                }
+            }
+            else {
+                if (newcount == 0)
+                    document.getElementById("result").deleteRow(rownumb);
+                else document.getElementById("result").rows.item(rownumb).cells.item(2).innerHTML = String(newcount);
+            }
+            summ();
+        }
+        function summ() {
+            var array = document.getElementById("base");
+            var rowLength = array.rows.length;
+            var summ = 0;
+            for (i = 1; i < rowLength; i++) {
+                var cell = array.rows.item(i).cells;
+                summ += Number(cell.item(1).innerHTML) * Number(cell.item(2).innerHTML);//счёт от 0
+            }
+            document.getElementById("overall").innerHTML = summ;
+        }
+    </script>
+    <style>
+        table, td, tr{border:1px solid black;}
+    </style>
+</head>
+<body>
+    <h1>Оформление заказа. Уютный уголок</h1>
+    <p>Список товаров:</p>
+    <table id="base">
+        <tr>
+            <th>Наименование товара</th>
+            <th>Стоимость товара</th>
+            <th>Количество</th>
+            <th></th>
+        </tr>
+        <tr>
+            <td>Свеча</td>
+            <td>700</td>
+            <td>0</td>
+            <td><button onclick="add(1, '+')">+</button><button onclick="add(1, '-')">-</button></td>
+        </tr>
+        <tr>
+            <td>Духи</td>
+            <td>2100</td>
+            <td>0</td>
+            <td><button onclick="add(2, '+')">+</button><button onclick="add(2, '-')">-</button></td>
+        </tr>
+        <tr>
+            <td>Одеяло</td>
+            <td>2785</td>
+            <td>0</td>
+            <td><button onclick="add(3, '+')">+</button><button onclick="add(3, '-')">-</button></td>
+        </tr>
+        <tr>
+            <td>Гирлянда</td>
+            <td>650</td>
+            <td>0</td>
+            <td><button onclick="add(4, '+')">+</button><button onclick="add(4, '-')">-</button></td>
+        </tr>
+        <tr>
+            <td>Подушка</td>
+            <td>1999</td>
+            <td>0</td>
+            <td><button onclick="add(5, '+')">+</button><button onclick="add(5, '-')">-</button></td>
+        </tr>
+    </table>
+    <h2>Заказ:</h2>
+    <table id="result">
+        <tr>
+            <th>Наименование товара</th>
+            <th>Стоимость</th>
+            <th>Количество</th>
+        </tr>
+    </table>
+    <div>
+        Общая стоимость заказа:
+        <output type="number" id="overall"></output>
+    </div>
+</body>
+</html>

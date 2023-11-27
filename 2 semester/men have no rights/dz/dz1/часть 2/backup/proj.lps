@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <ProjectSession>
+    <PathDelim Value="\"/>
+    <Version Value="12"/>
+    <BuildModes Active="Default"/>
+    <Units>
+      <Unit>
+        <Filename Value="proj.lpr"/>
+        <IsPartOfProject Value="True"/>
+        <IsVisibleTab Value="True"/>
+        <EditorIndex Value="2"/>
+        <CursorPos X="17" Y="7"/>
+        <UsageCount Value="29"/>
+        <Loaded Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="main.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="Form1"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <CursorPos X="42" Y="21"/>
+        <UsageCount Value="29"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="figure.pas"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="1"/>
+        <TopLine Value="63"/>
+        <CursorPos Y="91"/>
+        <UsageCount Value="29"/>
+        <Loaded Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="C:\lazarus\lcl\include\customimage.inc"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="34"/>
+        <CursorPos Y="44"/>
+        <UsageCount Value="10"/>
+      </Unit>
+      <Unit>
+        <Filename Value="C:\lazarus\lcl\include\rasterimage.inc"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="280"/>
+        <CursorPos Y="302"/>
+        <UsageCount Value="10"/>
+      </Unit>
+      <Unit>
+        <Filename Value="C:\lazarus\lcl\customtimer.pas"/>
+        <UnitName Value="CustomTimer"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="136"/>
+        <CursorPos Y="150"/>
+        <UsageCount Value="13"/>
+      </Unit>
+      <Unit>
+        <Filename Value="C:\lazarus\lcl\interfaces\win32\win32callback.inc"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="2917"/>
+        <CursorPos Y="2941"/>
+        <UsageCount Value="13"/>
+      </Unit>
+      <Unit>
+        <Filename Value="C:\lazarus\lcl\interfaces\win32\win32object.inc"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="386"/>
+        <CursorPos Y="415"/>
+        <UsageCount Value="9"/>
+      </Unit>
+      <Unit>
+        <Filename Value="C:\lazarus\lcl\include\pen.inc"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="126"/>
+        <CursorPos Y="146"/>
+        <UsageCount Value="10"/>
+      </Unit>
+      <Unit>
+        <Filename Value="C:\lazarus\lcl\graphics.pp"/>
+        <UnitName Value="Graphics"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="2657"/>
+        <CursorPos Y="2676"/>
+        <UsageCount Value="10"/>
+      </Unit>
+    </Units>
+    <JumpHistory HistoryIndex="21">
+      <Position>
+        <Filename Value="figure.pas"/>
+        <Caret Line="44" TopLine="34"/>
+      </Position>
+      <Position>
+        <Filename Value="main.pas"/>
+        <Caret Line="46" TopLine="22"/>
+      </Position>
+      <Position>
+        <Filename Value="figure.pas"/>
+        <Caret Line="44" TopLine="34"/>
+      </Position>
+      <Position>
+        <Filename Value="main.pas"/>
+        <Caret Line="46" TopLine="22"/>
+      </Position>
+      <Position>
+        <Filename Value="figure.pas"/>
+        <Caret Line="44" TopLine="34"/>
+      </Position>
+      <Position>
+        <Filename Value="main.pas"/>
+        <Caret Line="46" TopLine="22"/>
+      </Position>
+      <Position>
+        <Filename Value="figure.pas"/>
+        <Caret Line="44" TopLine="34"/>
+      </Position>
+      <Position>
+        <Filename Value="main.pas"/>
+        <Caret Line="46" TopLine="22"/>
+      </Position>
+      <Position>
+        <Filename Value="figure.pas"/>
+        <Caret Line="44" TopLine="34"/>
+      </Position>
+      <Position>
+        <Filename Value="main.pas"/>
+        <Caret Line="46" TopLine="22"/>
+      </Position>
+      <Position>
+        <Filename Value="figure.pas"/>
+        <Caret Line="44" TopLine="34"/>
+      </Position>
+      <Position>
+        <Filename Value="figure.pas"/>
+        <Caret Line="47" TopLine="34"/>
+      </Position>
+      <Position>
+        <Filename Value="figure.pas"/>
+        <Caret Line="48" TopLine="34"/>
+      </Position>
+      <Position>
+        <Filename Value="main.pas"/>
+        <Caret Line="51" Column="26" TopLine="38"/>
+      </Position>
+      <Position>
+        <Filename Value="figure.pas"/>
+        <Caret Line="64" Column="43" TopLine="48"/>
+      </Position>
+      <Position>
+        <Filename Value="figure.pas"/>
+        <Caret Line="87" Column="39" TopLine="63"/>
+      </Position>
+      <Position>
+        <Filename Value="main.pas"/>
+        <Caret Line="7" Column="16"/>
+      </Position>
+      <Position>
+        <Filename Value="main.pas"/>
+        <Caret Line="50" Column="32" TopLine="37"/>
+      </Position>
+      <Position>
+        <Filename Value="main.pas"/>
+        <Caret Line="65" TopLine="37"/>
+      </Position>
+      <Position>
+        <Filename Value="figure.pas"/>
+        <Caret Line="6" Column="13"/>
+      </Position>
+      <Position>
+        <Filename Value="proj.lpr"/>
+        <Caret Line="11" Column="15"/>
+      </Position>
+      <Position>
+        <Filename Value="proj.lpr"/>
+        <Caret Line="13" Column="19"/>
+      </Position>
+    </JumpHistory>
+    <RunParams>
+      <FormatVersion Value="2"/>
+      <Modes ActiveMode=""/>
+    </RunParams>
+  </ProjectSession>
+  <Debugging>
+    <Watches>
+      <Item>
+        <Expression Value="f"/>
+      </Item>
+      <Item>
+        <Expression Value="x+dx+halflen"/>
+      </Item>
+      <Item>
+        <Expression Value="image.width"/>
+      </Item>
+      <Item>
+        <Expression Value="dx"/>
+      </Item>
+      <Item>
+        <Expression Value="x"/>
+      </Item>
+      <Item>
+        <Expression Value="t"/>
+      </Item>
+      <Item>
+        <Expression Value="tt"/>
+      </Item>
+      <Item>
+        <Expression Value="t2"/>
+      </Item>
+    </Watches>
+  </Debugging>
+</CONFIG>

@@ -1,0 +1,35 @@
+object Form2: TForm2
+  Left = 408
+  Height = 240
+  Top = 391
+  Width = 357
+  Caption = 'Какого товара больше всего?'
+  ClientHeight = 240
+  ClientWidth = 357
+  LCLVersion = '2.2.2.0'
+  object muchb: TButton
+    Left = 96
+    Height = 25
+    Top = 16
+    Width = 168
+    Caption = 'Посчитать'
+    OnClick = muchbClick
+    TabOrder = 0
+  end
+  object muche: TEdit
+    Left = 96
+    Height = 23
+    Top = 72
+    Width = 168
+    TabOrder = 1
+  end
+  object backb: TButton
+    Left = 96
+    Height = 25
+    Top = 176
+    Width = 168
+    Caption = 'Меню'
+    OnClick = backbClick
+    TabOrder = 2
+  end
+end

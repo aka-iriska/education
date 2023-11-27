@@ -1,0 +1,59 @@
+#include <iostream>
+#include <stdlib.h>
+#include <string.h>
+/*sjshd323kw+djh**+-hs293891sdf
+32sw227sj+s-*wy2+3g59hgd
++sie93323+dfieeife2+_32* */
+using namespace std;
+const char b[] = "qwertyuiopasdfghjklzxcvbnm";
+const char ch[] = "1234567890";
+const char s[] = "+-*";
+void kol(char** list, int k) {
+	char* str, * f;
+	int cb = 0; int cch = 0; int cs = 0;
+	bool fb, fch, fs;
+	fb = fch = fs = false;
+	for (int i = 0; i < k; i++) {
+		str = list[i];
+		f = str;
+		while (f != nullptr) {
+			if (strchr(b, f[0]) != nullptr) {
+				if (fch == true) cch++;
+				if (fs == true) cs++;
+				fb = true; fch = false; fs = false;
+				f++;
+			}
+			else {
+				if (fb == true) cb++;
+				if (strchr(ch, f[0]) != nullptr) {
+					fch = true;  fb = false; fs = false; f++;
+				}
+				else {
+					if (fch == true) cch++;
+					fs = true;
+					fch = false;
+					fb = false;
+					f++;
+				}
+			}
+		}
+		cout << "The " << i << "string: " << cb<<" "<<cch << " " << cs << "\n";
+	}
+}
+//int zam
+int main() {
+	int kolstr;
+	cout << "The amount: \n";
+	cin >> kolstr;
+	char** listnew = new char* [kolstr];
+	cout << "Исходные строки:" << endl;
+	for (int i = 0; i < kolstr; i++)
+	{
+		char* str = new char[50];
+		gets_s(str, 50);
+		listnew[i] = str;
+	}
+	kol(listnew, kolstr);
+	for (int i = 0; i < kolstr; i++) delete[] listnew[i];
+	delete[]listnew;
+}

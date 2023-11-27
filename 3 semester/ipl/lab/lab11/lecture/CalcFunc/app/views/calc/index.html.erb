@@ -1,0 +1,11 @@
+<%= t(:'Sin calculation') %>
+<%= form_tag("/calc/view", :method => "get") do %>
+  <%= label_tag(t(:'From:')) %>
+  <%= text_field_tag(:from) %> <br/>
+  <%= label_tag(t(:'To:')) %>
+  <%= text_field_tag(:to) %> <br/>
+  <%= label_tag(t(:'Step:')) %>
+  <%= text_field_tag(:step) %> <br/>
+
+  <%= submit_tag(t(:'View result')) %>
+<% end %>

@@ -1,0 +1,4 @@
+﻿  Source.cpp
+e:\ооп\дз\dz2\часть 3\pppp\pppp\source.cpp(40): warning C4101: ptr1: неиспользованная локальная переменная
+e:\ооп\дз\dz2\часть 3\pppp\pppp\source.cpp(40): warning C4101: ptr2: неиспользованная локальная переменная
+  pppp.vcxproj -> E:\ооп\дз\dz2\часть 3\pppp\Debug\pppp.exe

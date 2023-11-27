@@ -1,0 +1,32 @@
+<%= form_with(model: chisla_result) do |form| %>
+  <% if chisla_result.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(chisla_result.errors.count, "error") %> prohibited this chisla_result from being saved:</h2>
+
+      <ul>
+        <% chisla_result.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :string, style: "display: block" %>
+    <%= form.text_area :string %>
+  </div>
+
+  <div>
+    <%= form.label :result, style: "display: block" %>
+    <%= form.text_area :result %>
+  </div>
+
+  <div>
+    <%= form.label :my_table, style: "display: block" %>
+    <%= form.text_field :my_table %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>

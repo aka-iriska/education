@@ -1,0 +1,3 @@
+<link rel="stylesheet"
+ href="http://e-learning.bmstu.ru/moodle/pluginfile.php/7546/
+mod_folder/content/0/bootstrap.min.css">

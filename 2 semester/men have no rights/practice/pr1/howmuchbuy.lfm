@@ -1,0 +1,122 @@
+object Form3: TForm3
+  Left = 452
+  Height = 355
+  Top = 444
+  Width = 510
+  Caption = 'Сколько кг можно купить на сумму'
+  ClientHeight = 355
+  ClientWidth = 510
+  LCLVersion = '2.2.2.0'
+  object sume: TEdit
+    Left = 168
+    Height = 23
+    Top = 24
+    Width = 192
+    TabOrder = 0
+  end
+  object namee: TEdit
+    Left = 168
+    Height = 23
+    Top = 80
+    Width = 168
+    TabOrder = 1
+  end
+  object prove: TEdit
+    Left = 168
+    Height = 23
+    Top = 124
+    Width = 168
+    TabOrder = 2
+  end
+  object edit1: TEdit
+    Left = 168
+    Height = 23
+    Top = 172
+    Width = 168
+    TabOrder = 3
+  end
+  object mase: TEdit
+    Left = 168
+    Height = 23
+    Top = 212
+    Width = 168
+    TabOrder = 4
+  end
+  object prb: TButton
+    Left = 80
+    Height = 25
+    Top = 263
+    Width = 88
+    Caption = 'Предыдущий'
+    Enabled = False
+    OnClick = prbClick
+    TabOrder = 5
+  end
+  object putb: TButton
+    Left = 216
+    Height = 25
+    Top = 263
+    Width = 75
+    Caption = 'Вывести'
+    OnClick = putbClick
+    TabOrder = 6
+  end
+  object nextb: TButton
+    Left = 344
+    Height = 25
+    Top = 263
+    Width = 88
+    Caption = 'Следующий'
+    OnClick = nextbClick
+    TabOrder = 7
+  end
+  object exitb: TButton
+    Left = 216
+    Height = 25
+    Top = 312
+    Width = 75
+    Caption = 'Меню'
+    OnClick = exitbClick
+    TabOrder = 8
+  end
+  object suml: TLabel
+    Left = 48
+    Height = 15
+    Top = 24
+    Width = 82
+    Caption = 'Введите сумму'
+    ParentColor = False
+  end
+  object namel: TLabel
+    Left = 98
+    Height = 15
+    Top = 80
+    Width = 32
+    Caption = 'Товар'
+    ParentColor = False
+  end
+  object provl: TLabel
+    Left = 67
+    Height = 15
+    Top = 128
+    Width = 63
+    Caption = 'Поставщик'
+    ParentColor = False
+  end
+  object Label1: TLabel
+    Left = 65
+    Height = 15
+    Top = 176
+    Width = 65
+    Caption = 'Цена за 1 кг'
+    ParentColor = False
+  end
+  object masl: TLabel
+    Left = 95
+    Height = 15
+    Top = 216
+    Width = 35
+    Caption = 'Масса'
+    ParentColor = False
+  end
+end

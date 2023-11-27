@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="VcsDirectoryMappings">
+    <mapping directory="$PROJECT_DIR$/.." vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/ipl" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/ipl/lab" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/ipl/lab/RK2/rk2/chisla" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/ipl/lab/lab10/mine/chisla-api" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/ipl/lab/lab10/mine/chisla-proxy" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/ipl/lab/lab11/lab11_v4/chisla11" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/ipl/lab/lab11/lecture/CalcFunc" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/ipl/lab/lab12" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/ipl/lab/lab12/mine/chisla12" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/ipl/lab/lab8/mine/chisla" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/ipl/lab/lab8/test/calc" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/ipl/lab/lab8/test/calc9" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/ipl/lab/lab8/test/testing" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/ipl/lab/lab9/lab9/chisla9" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/ipl/lab/lab9/mine/chisla9" vcs="Git" />
+  </component>
+</project>

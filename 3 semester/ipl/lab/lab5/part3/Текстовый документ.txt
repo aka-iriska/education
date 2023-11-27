@@ -1,0 +1,37 @@
+def shifr(str, number)
+  abc = ('a'..'z').zip(1..26).to_h
+  strmap = str.split
+  id = 0
+  strmap.each do |slovo|
+    newstr = slovo
+    slovo.each_char { |bukva| newstr = zamenab(abc, bukva, slovo, number) }
+    strmap[id] = newstr
+    id += 1
+  end
+  strmap.join(' ')
+end
+
+def zamenab(abc, bukva, slovo, number)
+  n = abc[bukva].to_i
+  n -= 26 if n + number > 26
+  needed = abc.key(n + number)
+  slovo.gsub(bukva, needed)
+end
+--------------------------------------
+def shifr(str, number)
+  abc = ('a'..'z').zip(1..26).to_h
+  strmap = str.split
+  id = 0
+  strmap.each do |slovo|
+    newstr = slovo
+    slovo.each_char do |bukva|
+      n = abc[bukva].to_i
+      n -= 26 if n + number > 26
+      needed = abc.key(n + number)
+      newstr = newstr.gsub(bukva, needed)
+    end
+    strmap[id] = newstr
+    id += 1
+  end
+  strmap.join(' ')
+end

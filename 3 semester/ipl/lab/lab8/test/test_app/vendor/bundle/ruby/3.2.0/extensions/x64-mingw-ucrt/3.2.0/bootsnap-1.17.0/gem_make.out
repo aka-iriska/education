@@ -1,0 +1,19 @@
+current directory: D:/education/3 semester/ipl/lab/lab8/test/test_app/vendor/bundle/ruby/3.2.0/gems/bootsnap-1.17.0/ext/bootsnap
+C:/Ruby32-x64/bin/ruby.exe extconf.rb
+creating Makefile
+
+current directory: D:/education/3 semester/ipl/lab/lab8/test/test_app/vendor/bundle/ruby/3.2.0/gems/bootsnap-1.17.0/ext/bootsnap
+make DESTDIR\= sitearchdir\=./.gem.20231108-2276-60y9tg sitelibdir\=./.gem.20231108-2276-60y9tg clean
+
+current directory: D:/education/3 semester/ipl/lab/lab8/test/test_app/vendor/bundle/ruby/3.2.0/gems/bootsnap-1.17.0/ext/bootsnap
+make DESTDIR\= sitearchdir\=./.gem.20231108-2276-60y9tg sitelibdir\=./.gem.20231108-2276-60y9tg
+generating bootsnap-x64-mingw-ucrt.def
+compiling bootsnap.c
+linking shared-object bootsnap/bootsnap.so
+
+current directory: D:/education/3 semester/ipl/lab/lab8/test/test_app/vendor/bundle/ruby/3.2.0/gems/bootsnap-1.17.0/ext/bootsnap
+make DESTDIR\= sitearchdir\=./.gem.20231108-2276-60y9tg sitelibdir\=./.gem.20231108-2276-60y9tg install
+/usr/bin/install -c -m 0755 bootsnap.so ./.gem.20231108-2276-60y9tg/bootsnap
+
+current directory: D:/education/3 semester/ipl/lab/lab8/test/test_app/vendor/bundle/ruby/3.2.0/gems/bootsnap-1.17.0/ext/bootsnap
+make DESTDIR\= sitearchdir\=./.gem.20231108-2276-60y9tg sitelibdir\=./.gem.20231108-2276-60y9tg clean

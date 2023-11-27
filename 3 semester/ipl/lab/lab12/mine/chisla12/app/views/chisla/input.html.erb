@@ -1,0 +1,16 @@
+<h1>Chisla#input</h1>
+<p>Find me in app/views/chisla/input.html.erb</p>
+<div>
+  <form action="<%= view_path %>" method="get" accept-charset="UTF-8">
+    <div>
+      <label for="str">Введите не менее 10 чисел
+        <input type="text" id="str" name="str" value = "1 2 3 1 2 3 4 5 1 2 3 1 2 3 4" required/>
+      </label>
+    </div>
+    <br>
+    <div>
+      <input type="submit" value="Найти наиболее длинную монотонно возврастающую последовательность"/>
+    </div>
+  </form>
+</div>
+

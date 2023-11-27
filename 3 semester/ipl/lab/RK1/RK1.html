@@ -1,0 +1,72 @@
+﻿<!DOCTYPE html>
+
+<html lang="ru" dir="ltr">
+<head>
+    <meta charset="utf-8" />
+    <title>Дулина Ирина РК1</title>
+</head>
+<body>
+    <form.submit()>
+        <p>Введите числа через пробел</p>
+        <input type="text" id="mass">  
+        <button onclick="change()">Вывести</button>
+        <p id="err"></p>
+        <p id="start"></p>
+        <p id="res"></p>
+    </form.submit()>
+    <script type="text/javascript">
+        function change() {
+            //очищаем поля
+            document.getElementById("err").innerHTML = "";
+            document.getElementById("start").innerHTML = "";
+            document.getElementById("res").innerHTML = "";
+
+            if (document.getElementById("mass").value == 0) document.getElementById("err").innerHTML = "Массив чисел не введен";
+            else {
+                var array = document.getElementById("mass").value.split(" ").map(Number);
+                document.getElementById("start").innerHTML = "Изначальный ряд: <br>"+array.join("\n");
+                /*изменяемый код*/
+                /*
+                //v21    
+                var maxx = 0;
+                var ind1 = 0; var ind2 = 0;
+                for (var i = 0; i < array.length * 0.5 -1; i++) {
+                    if (array[i] + array[array.length - i - 1] > maxx) {
+                        maxx = array[i] + array[array.length - i - 1];
+                        ind1 = i;
+                        ind2 = array.length - i - 1;
+                    }
+                }
+                var nulid = 0;
+                var f = false;
+                for (var i = 0; i < array.length; i++) {
+                    if (array[i] ==0) {
+                        nulid = i;
+                        f = true;
+                    }
+                }
+                if (f == true) {
+                    array[nulid] = maxx;
+                    document.getElementById("res").innerHTML = "Измененный ряд: <br>" + array.join("\n") + "<br> Сумма:" + maxx + "<br> Номера элементов: " + ind1 + " " + ind2;
+                }
+                else document.getElementById("res").innerHTML = "Измененный ряд : нулевого элемента нет, без изменений" + "<br> Сумма:" + maxx + "<br> Номера элементов: " + ind1 + " " + ind2;
+                */
+                /* //v class
+                var summ = 0;
+                var changeid = 0;
+                var f = false;
+                for (var i = 0; i <= array.length - 1; i++) {
+                    if ((array[i] % 2 != 0) && (f == false)) {
+                        changeid = i; f = true;
+                    }
+                    if (array[i] < 0) summ += array[i];
+                }
+                if (f == true) array[changeid] = summ;
+                document.getElementById("res").innerHTML = "Измененный ряд: <br>"+array.join("\n");
+                */
+                /* изменяемый код */
+            }
+        }
+    </script>
+</body>
+</html>

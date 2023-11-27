@@ -1,0 +1,78 @@
+﻿<!DOCTYPE html>
+
+<html lang="ru" dir="ltr">
+<head>
+    <meta charset="utf-8" />
+    <title>Дулина Ирина РК1</title>
+</head>
+<body>
+    <h1>Дулина Ирина ИУ6-35Б</h1>
+    <h2>Вариант 8</h2>
+    <h3>Дан массив чисел arr_h. Найти частное от деления количества отрицательных элементов на количество положительных. 
+    Вставить его перед первым положительным элементом массива или в конец, если положительных нет</h3>
+    <form.submit()>
+        <p>Введите числа через пробел</p>
+        <input type="text" id="mass">  
+        <button onclick="change()">Вывести</button>
+        <button onclick="def()">Дефолтный массив</button>
+        <p id="err"></p>
+        <p id="start"></p>
+        <p id="res"></p>
+    </form.submit()>
+    <script type="text/javascript">
+        function def(){ //вызов дефолтного массива 
+            document.getElementById("mass").value = "-3 2 12 -5 -10 5 2 1 -34";
+            change();
+        }
+        function change() {
+            //очищаем поля
+            document.getElementById("err").innerHTML = "";
+            document.getElementById("start").innerHTML = "";
+            document.getElementById("res").innerHTML = "";
+
+            if (document.getElementById("mass").value == 0 || document.getElementById("mass").value.split(" ").map(Number).some(isNaN)) 
+               document.getElementById("err").innerHTML = "Массив чисел не введен";
+            else {
+                var array = document.getElementById("mass").value.trim().split(/[\s,]+/).map(Number);//TRIM для удаления пробелов в начале и в конце строки
+                document.getElementById("start").innerHTML = "Изначальный ряд: <br>"+array.join("\n");   
+                var colpol = 0; var colotr = 0;//число положительных и отрицательных элементов
+                var elid = 0; //индекс первого положительного элемента
+                var f = false; //флаг на нахождение первого положительного элемента
+                for (var i = 0; i < array.length; i++) {
+                    if (array[i] > 0) {
+                        colpol += 1;
+                        if (f == false) {
+                            elid = i;
+                            f = true;
+                        }
+                    }
+                    if (array[i] < 0) colotr += 1;
+                }
+                if (colpol == 0 && colotr == 0) {
+                    document.getElementById("err").innerHTML = "Нет ни положительных, ни отрицательных элементов";
+                }
+                else {
+                    number = Math.trunc(colotr / colpol); //частное от деления блять    TRUNC А НЕ ROUND
+                    if (f == true) { //если положительный элемент нашёлся, то ВСТАВЛЯЕМ его в массив
+                        if (elid != 0) {
+                            array1 = array.slice(0, elid);
+                            array1.push(number);
+                            array2 = array.slice(elid, array.length);
+                            array = array1.concat(array2);
+                        }
+                        if (elid == 0) array = [number].concat(array);
+                    }
+                    else {
+                        array.push(number);//если положительного элемента нет
+                        elid = array.length - 1;//меняем значение нужного элемента с 0 на последний
+                    }
+                    document.getElementById("res").innerHTML = "Измененный ряд: <br>" + array.join("\n") +
+                        "<br> Количество отрицательных:" + colotr +
+                        "<br> Количество положительных:" + colpol +
+                        "<br> Частное от деления:" + number + "<br> Индекс места: " + elid;
+                }
+            }
+        }
+    </script>
+</body>
+</html>

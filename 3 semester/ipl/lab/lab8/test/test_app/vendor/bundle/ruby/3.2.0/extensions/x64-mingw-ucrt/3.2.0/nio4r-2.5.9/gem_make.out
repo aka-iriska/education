@@ -1,0 +1,18 @@
+current directory: D:/education/3 semester/ipl/lab/lab8/test/test_app/vendor/bundle/ruby/3.2.0/gems/nio4r-2.5.9/ext/nio4r
+C:/Ruby32-x64/bin/ruby.exe extconf.rb
+
+current directory: D:/education/3 semester/ipl/lab/lab8/test/test_app/vendor/bundle/ruby/3.2.0/gems/nio4r-2.5.9/ext/nio4r
+make DESTDIR\= sitearchdir\=./.gem.20231108-2276-95o96u sitelibdir\=./.gem.20231108-2276-95o96u clean
+make: *** Нет правила для сборки цели «clean».  Останов.
+
+current directory: D:/education/3 semester/ipl/lab/lab8/test/test_app/vendor/bundle/ruby/3.2.0/gems/nio4r-2.5.9/ext/nio4r
+make DESTDIR\= sitearchdir\=./.gem.20231108-2276-95o96u sitelibdir\=./.gem.20231108-2276-95o96u
+make: Цель «all» не требует выполнения команд.
+
+current directory: D:/education/3 semester/ipl/lab/lab8/test/test_app/vendor/bundle/ruby/3.2.0/gems/nio4r-2.5.9/ext/nio4r
+make DESTDIR\= sitearchdir\=./.gem.20231108-2276-95o96u sitelibdir\=./.gem.20231108-2276-95o96u install
+make: Цель «install» не требует выполнения команд.
+
+current directory: D:/education/3 semester/ipl/lab/lab8/test/test_app/vendor/bundle/ruby/3.2.0/gems/nio4r-2.5.9/ext/nio4r
+make DESTDIR\= sitearchdir\=./.gem.20231108-2276-95o96u sitelibdir\=./.gem.20231108-2276-95o96u clean
+make: *** Нет правила для сборки цели «clean».  Останов.

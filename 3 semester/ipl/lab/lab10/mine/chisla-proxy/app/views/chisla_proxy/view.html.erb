@@ -1,0 +1,13 @@
+<h1>ChislaProxy#view</h1>
+<p>Find me in app/views/chisla_proxy/view.html.erb</p>
+<div>
+  <p>
+    <a href="<%= url_for(only_path: false) + '.html.erb' %>">Мы находимся по
+      адресу: <%= url_for(only_path: false) + '.html.erb' %></a>
+  </p>
+
+
+  <%= @output.html_safe %>
+  <br/>
+  <%= link_to "Рассчитать заново", :chisla_proxy_input %>
+</div>

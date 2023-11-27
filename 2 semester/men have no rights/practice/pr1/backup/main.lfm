@@ -1,0 +1,143 @@
+object Form1: TForm1
+  Left = 312
+  Height = 364
+  Top = 173
+  Width = 691
+  Caption = 'Овощная база'
+  ClientHeight = 364
+  ClientWidth = 691
+  Color = 14267315
+  LCLVersion = '2.2.2.0'
+  object maxbutton: TButton
+    Left = 40
+    Height = 25
+    Top = 69
+    Width = 211
+    Caption = 'Какого товара больше всего?'
+    OnClick = maxbuttonClick
+    TabOrder = 0
+  end
+  object muchbutton: TButton
+    Left = 40
+    Height = 25
+    Top = 112
+    Width = 211
+    Caption = 'Сколько кг можно купить?'
+    OnClick = muchbuttonClick
+    TabOrder = 1
+  end
+  object benefitbutton: TButton
+    Left = 40
+    Height = 25
+    Top = 157
+    Width = 211
+    Caption = 'Самый выгодный поставщик'
+    OnClick = benefitbuttonClick
+    TabOrder = 2
+  end
+  object tablebutton: TButton
+    Left = 40
+    Height = 25
+    Top = 200
+    Width = 211
+    Caption = 'Гистограмма'
+    OnClick = tablebuttonClick
+    TabOrder = 3
+  end
+  object exitbutton: TButton
+    Left = 101
+    Height = 25
+    Top = 264
+    Width = 75
+    Caption = 'Выход'
+    OnClick = exitbuttonClick
+    TabOrder = 4
+  end
+  object addbutton: TButton
+    Left = 432
+    Height = 25
+    Top = 264
+    Width = 75
+    Caption = 'Добавить'
+    OnClick = addbuttonClick
+    TabOrder = 5
+  end
+  object delbutton: TButton
+    Left = 565
+    Height = 25
+    Top = 264
+    Width = 75
+    Caption = 'Удалить'
+    OnClick = delbuttonClick
+    TabOrder = 6
+  end
+  object Button8: TButton
+    Left = 496
+    Height = 25
+    Top = 312
+    Width = 75
+    Caption = 'Таблица'
+    OnClick = Button8Click
+    TabOrder = 7
+  end
+  object nedit: TEdit
+    Left = 432
+    Height = 23
+    Top = 72
+    Width = 208
+    TabOrder = 8
+  end
+  object proedit: TEdit
+    Left = 432
+    Height = 23
+    Top = 112
+    Width = 208
+    TabOrder = 9
+  end
+  object amedit: TEdit
+    Left = 432
+    Height = 23
+    Top = 160
+    Width = 208
+    TabOrder = 10
+  end
+  object predit: TEdit
+    Left = 432
+    Height = 23
+    Top = 202
+    Width = 208
+    TabOrder = 11
+  end
+  object nlabel: TLabel
+    Left = 272
+    Height = 15
+    Top = 79
+    Width = 64
+    Caption = 'Имя товара'
+    ParentColor = False
+  end
+  object prolabel: TLabel
+    Left = 272
+    Height = 15
+    Top = 120
+    Width = 63
+    Caption = 'Поставшик'
+    ParentColor = False
+  end
+  object amlabel: TLabel
+    Left = 272
+    Height = 15
+    Top = 168
+    Width = 147
+    Caption = 'Количество в наличии (кг)'
+    ParentColor = False
+  end
+  object prlabel: TLabel
+    Left = 272
+    Height = 15
+    Top = 210
+    Width = 73
+    Caption = 'Цена (за 1 кг)'
+    ParentColor = False
+  end
+end

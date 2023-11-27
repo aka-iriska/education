@@ -1,0 +1,14 @@
+debug/gystform.o
+debug/main.o
+debug/mainform.o
+debug/basefile.o
+debug/themostform.o
+debug/muchform.o
+debug/benproform.o
+debug/tableform.o
+debug/qrc_qmake_qmake_qm_files.o
+debug/moc_gystform.o
+debug/moc_mainform.o
+debug/moc_themostform.o
+debug/moc_muchform.o
+debug/moc_benproform.o

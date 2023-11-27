@@ -1,0 +1,8 @@
+<h1>Chisla#input</h1>
+<p>Find me in app/views/chisla/input.html.erb</p>
+<%=form_tag("/chisla/input.json", :method => "get", remote: true, id: 'chisla_form') do %>
+  <%=label_tag("Введите не менее 10 чисел")%>
+  <%=text_field_tag(:str)%><br/><br/>
+  <%=submit_tag("Найти наиболее длинную монотонно возврастающую последовательность")%>
+<% end%>
+<div id="result"></div>

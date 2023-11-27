@@ -1,0 +1,13 @@
+<table>
+  <tr>
+    <td>x</td>
+    <td>val</td>
+  </tr>
+  <% @result.each do |item| %>
+    <tr>
+      <td><%= item[0] %></td>
+      <td><%= item[1] %></td>
+    </tr>
+  <% end %>
+</table>
+<%= link_to "Repeat calculation", :calc_index %>

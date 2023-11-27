@@ -1,0 +1,20 @@
+<h1>Calc#input</h1>
+<p>Find me in app/views/calc/input.html.erb</p>
+<%= form_tag("/calc/view.json", :method => "get",
+remote: true, id: 'calc_form') do %>
+<%= label_tag("Value 1:") %>
+<%= text_field_tag(:v1) %> <br/>
+<%= label_tag("Value 2") %>
+<%= text_field_tag(:v2) %> <br/>
+<%= label_tag("+") %>
+<%= radio_button_tag(:op, "+") %><br/>
+<%= label_tag("-") %>
+<%= radio_button_tag(:op, "-") %><br/>
+<%= label_tag("*") %>
+<%= radio_button_tag(:op, "*") %><br/>
+<%= label_tag("/") %>
+<%= radio_button_tag(:op, "/") %><br/>
+<br/>
+<%= submit_tag("Calc result") %>
+<div id="result"></div>
+<% end %>

@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @chisla_result %>
+
+<div>
+  <%= link_to "Edit this chisla result", edit_chisla_result_path(@chisla_result) %> |
+  <%= link_to "Back to chisla results", chisla_results_path %>
+
+  <%= button_to "Destroy this chisla result", @chisla_result, method: :delete %>
+</div>

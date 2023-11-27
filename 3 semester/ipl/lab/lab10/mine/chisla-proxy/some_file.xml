@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<?xml-stylesheet type="text/xsl" href="some_transformer.xslt"?>
+<catalog>
+  <cd>
+    <former>1 5 6</former>
+    <every>2 10</every>
+    <plus>+</plus>
+  </cd>
+  <cd>
+    <former> </former>
+    <every>2 5</every>
+    <plus> </plus>
+  </cd>
+  <cd>
+    <former> </former>
+    <every>2 -1 0 4</every>
+    <plus> </plus>
+  </cd>
+</catalog>

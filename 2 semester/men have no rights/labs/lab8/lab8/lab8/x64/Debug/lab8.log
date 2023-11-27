@@ -1,0 +1,4 @@
+﻿  source.cpp
+D:\men have no rights\labs\lab8\lab8\lab8\source.cpp(14,12): warning C4244: =: преобразование "double" в "float", возможна потеря данных
+D:\men have no rights\labs\lab8\lab8\lab8\source.cpp(37,15): warning C4244: return: преобразование "float" в "int", возможна потеря данных
+  lab8.vcxproj -> D:\men have no rights\labs\lab8\lab8\x64\Debug\lab8.exe

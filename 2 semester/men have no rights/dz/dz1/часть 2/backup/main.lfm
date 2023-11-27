@@ -1,0 +1,41 @@
+object Form1: TForm1
+  Left = 1165
+  Height = 509
+  Top = 262
+  Width = 677
+  Caption = 'Движение фигур'
+  ClientHeight = 509
+  ClientWidth = 677
+  LCLVersion = '2.2.2.0'
+  object Image1: TImage
+    Left = 24
+    Height = 434
+    Top = 16
+    Width = 624
+  end
+  object beginbutton: TButton
+    Left = 163
+    Height = 25
+    Top = 464
+    Width = 75
+    Caption = 'Start'
+    OnClick = beginbuttonClick
+    TabOrder = 0
+  end
+  object exitbutton: TButton
+    Left = 433
+    Height = 25
+    Top = 464
+    Width = 75
+    Caption = 'Finish'
+    OnClick = exitbuttonClick
+    TabOrder = 1
+  end
+  object Timer1: TTimer
+    Enabled = False
+    Interval = 100
+    OnTimer = Timer1Timer
+    Left = 312
+    Top = 464
+  end
+end

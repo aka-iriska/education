@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.779
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "pppp", "pppp\pppp.vcxproj", "{D75E527E-D8A8-473A-8126-EEB5F5F577DF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D75E527E-D8A8-473A-8126-EEB5F5F577DF}.Debug|x64.ActiveCfg = Debug|x64
+		{D75E527E-D8A8-473A-8126-EEB5F5F577DF}.Debug|x64.Build.0 = Debug|x64
+		{D75E527E-D8A8-473A-8126-EEB5F5F577DF}.Debug|x86.ActiveCfg = Debug|Win32
+		{D75E527E-D8A8-473A-8126-EEB5F5F577DF}.Debug|x86.Build.0 = Debug|Win32
+		{D75E527E-D8A8-473A-8126-EEB5F5F577DF}.Release|x64.ActiveCfg = Release|x64
+		{D75E527E-D8A8-473A-8126-EEB5F5F577DF}.Release|x64.Build.0 = Release|x64
+		{D75E527E-D8A8-473A-8126-EEB5F5F577DF}.Release|x86.ActiveCfg = Release|Win32
+		{D75E527E-D8A8-473A-8126-EEB5F5F577DF}.Release|x86.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C5625250-81F8-406A-90D2-C702E9E837DF}
+	EndGlobalSection
+EndGlobal

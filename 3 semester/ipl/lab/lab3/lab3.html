@@ -1,0 +1,50 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>lab 3</title>
+    <script type="text/javascript">
+        var str = "&nbsp;";
+        var k = 1;//глубина вхождения
+        function printing(node) {
+            while (node) {
+                if (node.nodeType != 3) {
+                    document.getElementById("res").innerHTML += str + " < " + node.nodeName + " > "+ "<br/>";
+                    console.log(node.nodeName);                    
+                    if (node.firstChild) {
+                        str += "&nbsp;&nbsp;";
+                        k += 1;
+                        printing(node.firstChild);
+                        document.getElementById("res").innerHTML += str + " < / " + node.nodeName + " > " + "<br/>";
+                    }
+                    
+                }
+                if (!node.nextSibling) {
+                    str = str.slice(0, str.length - 12);
+                    k -= 1;
+                }
+                node = node.nextSibling;
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1>Favourite book</h1>
+        <ul>
+            <li>Dostoevsky
+            <ul>
+                <li>Crime and Punishment</li>
+                <li> Master and Margaret</li>
+            </ul>
+            </li>
+        </ul>
+    <div>
+        Дерево:
+        <p id="res"></p>
+        <script>
+            printing(document.documentElement);
+        </script>
+    </div>
+</body>
+</html>

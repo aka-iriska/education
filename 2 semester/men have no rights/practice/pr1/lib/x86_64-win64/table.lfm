@@ -1,0 +1,86 @@
+object Form5: TForm5
+  Left = 689
+  Height = 365
+  Top = 249
+  Width = 576
+  Caption = 'Гистограмма'
+  ClientHeight = 365
+  ClientWidth = 576
+  LCLVersion = '2.2.0.4'
+  object Label1: TLabel
+    Left = 24
+    Height = 15
+    Top = 136
+    Width = 75
+    Caption = 'Средняя цена'
+  end
+  object Label2: TLabel
+    Left = 320
+    Height = 15
+    Top = 280
+    Width = 33
+    Caption = 'Товар'
+  end
+  object Button1: TButton
+    Left = 400
+    Height = 25
+    Top = 312
+    Width = 75
+    Caption = 'Меню'
+    OnClick = Button1Click
+    TabOrder = 0
+  end
+  object Button2: TButton
+    Left = 72
+    Height = 25
+    Top = 312
+    Width = 75
+    Caption = 'Построить'
+    OnClick = Button2Click
+    TabOrder = 1
+  end
+  object Chart1: TChart
+    Left = 128
+    Height = 256
+    Top = 16
+    Width = 392
+    AxisList = <    
+      item
+        Marks.LabelBrush.Style = bsClear
+        Minors = <>
+        Title.LabelFont.Orientation = 900
+        Title.LabelBrush.Style = bsClear
+      end    
+      item
+        TickColor = clSilver
+        TickLength = 0
+        Alignment = calBottom
+        Marks.Format = '%2:s'
+        Marks.LabelBrush.Style = bsClear
+        Marks.Style = smsLabel
+        Minors = <        
+          item
+            Intervals.Count = 1
+            Intervals.MinLength = 5
+            Intervals.Options = [aipUseCount, aipUseMinLength]
+            TickLength = 4
+            Marks.Format = '%2:s'
+            Marks.LabelBrush.Style = bsClear
+            Marks.Style = smsLabel
+          end>
+        Title.LabelBrush.Style = bsClear
+      end>
+    Margins.Bottom = 0
+    Title.Text.Strings = (
+      'TAChart'
+    )
+    object Chart1BarSeries1: TBarSeries
+      AxisIndexX = 1
+      AxisIndexY = 0
+      BarBrush.Color = clRed
+      BarWidthPercent = 90
+      Marks.Format = '%2:s'
+      Marks.Style = smsLabel
+    end
+  end
+end
