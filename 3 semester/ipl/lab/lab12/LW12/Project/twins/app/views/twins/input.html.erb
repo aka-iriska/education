@@ -1,0 +1,19 @@
+<h1>Twins#input</h1>
+
+<div class="row">
+  <div class="span6 offset3">
+    <p>
+      <a href="<%= url_for(only_path: false) + '.html.erb' %>">Мы находимся по
+        адресу: <%= url_for(only_path: false) + '.html.erb' %></a>
+    </p>
+
+    <form action="<%= view_path %>" method="get" accept-charset="UTF-8">
+      <div class="form-group">
+        <label for="n"></label>
+        <input type="number" id="n" name="n" min="0" minlength="1" oninput="this.value = Math.abs(this.value);" class="form-control" required/>
+      </div>
+
+      <button type="submit" class="btn btn-large btn-primary mt-4">Ввести</button>
+    </form>
+  </div>
+</div>

@@ -1,0 +1,13 @@
+<h1>Twins#view</h1>
+
+<div>
+  <p>
+    <a href="<%= url_for(only_path: false) + '.html.erb' %>">Мы находимся по
+      адресу: <%= url_for(only_path: false) + '.html.erb' %></a>
+  </p>
+
+
+  <%= @table.html_safe %>
+  <br/>
+  <%= link_to "Рассчитать заново", input_path %>
+</div>

@@ -1,0 +1,19 @@
+<% provide(:title, "Sign in") %>
+<h1>Вход</h1>
+
+<div class="row">
+  <div class="span6 offset3">
+    <%= form_for(:session, url: sessions_path) do |f| %>
+
+      <%= f.label :email %>
+      <%= f.text_field :email, class: "form-control", required: true %>
+
+      <%= f.label 'Пароль' %>
+      <%= f.password_field :password, minlength: 4, class: "form-control", required: true %>
+
+      <%= f.submit "Войти", class: "btn btn-large btn-primary mt-4" %>
+    <% end %>
+
+    <p>Еще не зарегистрированы? <%= link_to "Зарегестрироватья сейчас!", signup_path %></p>
+  </div>
+</div>
