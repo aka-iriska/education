@@ -1,0 +1,15 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @find %>
+
+<div>
+  <% if current_user && current_user.admin == true %>
+    <%= link_to "Отредактировать", edit_people_find_path(@finds) %> |
+  <% end %>
+
+  <%= link_to "Вернуться к people_finds", people_finds_path %>
+
+  <% if current_user && current_user.admin == true %>
+    <%= button_to "Удалить", @find, method: :delete %>
+  <% end %>
+</div>

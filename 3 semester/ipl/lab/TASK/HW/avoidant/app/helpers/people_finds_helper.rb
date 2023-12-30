@@ -1,0 +1,2 @@
+module PeopleFindsHelper
+end

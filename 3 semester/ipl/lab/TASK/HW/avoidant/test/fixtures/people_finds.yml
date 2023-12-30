@@ -1,0 +1,33 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  address: Address1
+  gender: m
+  age: 30
+  body_type: mesomorph
+  height: 150
+  race: negroid
+  facial_hair: no
+  voice: sopranos
+  hair_color: '#000000'
+  forehead: sloping
+  ears: angular
+  wrinkles: yes
+  created_at: '2030-06-01'
+  updated_at: '2030-06-01'
+
+two:
+  address: Address2
+  gender: w
+  age: 20
+  body_type: ectomorph
+  height: 180
+  race: mongoloid
+  facial_hair: yes
+  voice: sopranos
+  hair_color: '#000000'
+  forehead: convex
+  ears: round
+  wrinkles: no
+  created_at: '2049-06-01'
+  updated_at: '2049-06-01'

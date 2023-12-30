@@ -1,0 +1,9 @@
+console.log('Dynamic add more', '<%= j params[:req_from] %>');
+
+<% if params[:req_from] == 'home' %>
+  console.log('Render home');
+  $('#more_users_home_list').html("<%= j render 'layouts/home_users_list' %>");
+<% elsif params[:req_from] == 'people' %>
+  console.log('Render people');
+  $('#users-list').html("<%= j render 'layouts/users_list' %>");
+<% end %>

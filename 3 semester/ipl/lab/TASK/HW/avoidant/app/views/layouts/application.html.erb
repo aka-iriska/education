@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html id="root" lang="<%= I18n.locale %>" class="h-100" data-bs-theme="dark">
+<head>
+  <title>Avoidant</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <%= csrf_meta_tags %>
+  <%= csp_meta_tag %>
+
+  <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+  <%= javascript_importmap_tags %>
+  <%= render 'layouts/shim' %>
+
+  <link rel="icon" type="image/png" href="/assets/logo.png">
+  <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+  <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+</head>
+
+<body class="d-flex flex-column h-100">
+<%= render 'layouts/header' %>
+<div class="container mb-3">
+  <div class="mt-1">
+    <% flash.each do |key, value| %>
+      <div class="alert alert-<%= key %> alert-dismissible fade show" role="alert"><%= value %>
+        <button id="flash-close" type="button" class="btn-close" data-dismiss="alert">
+        </button>
+      </div>
+    <% end %>
+  </div>
+  <%= yield %>
+</div>
+
+<%= render 'layouts/footer' %>
+
+</body>
+</html>

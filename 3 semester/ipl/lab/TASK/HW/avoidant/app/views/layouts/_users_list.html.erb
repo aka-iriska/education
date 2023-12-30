@@ -1,0 +1,118 @@
+<% @all_users.each_with_index do |user, ind| %>
+  <div class="card hovered_card position-relative mt-4">
+    <div class="text-right position-absolute top-0 end-0 me-2 mt-1">
+      <span class="badge bg-primary rounded-pill"><%= ind + 1 %></span>
+    </div>
+
+    <div class="card-body">
+      <div class="row g-3">
+
+        <!-- Адрес -->
+        <div class="col-sm-4 mb-3">
+          <label class="text-primary"><%= t(:address) %></label>
+          <span class="first-big"><%= user.address %></span>
+        </div>
+
+        <!-- Пол -->
+        <div class="col-sm-4 mb-3">
+          <label class="text-primary"><%= t(:gender) %></label>
+          <span class="first-big"><%= t(user.gender) %></span>
+        </div>
+
+        <!-- Возрас -->
+        <div class="col-sm-4 mb-3">
+          <label class="text-primary"><%= t(:age) %></label>
+          <span class="first-big"><%= user.age %></span>
+        </div>
+
+        <!-- Телосложение -->
+        <div class="col-sm-4 mb-3">
+          <label class="text-primary"><%= t(:body) %></label>
+          <span class="first-big"><%= user.body_type ? t(user.body_type): ' - ' %></span>
+        </div>
+
+        <!-- Рост -->
+        <div class="col-sm-4 mb-3">
+          <label class="text-primary"><%= t(:height) %></label>
+          <span class="first-big"><%= user.height %></span>
+        </div>
+
+        <!-- Раса -->
+        <div class="col-sm-4 mb-3">
+          <label class="text-primary"><%= t(:race) %></label>
+          <span class="first-big"><%= user.race ? t(user.race): ' - ' %></span>
+        </div>
+
+        <!-- РАстительность на лице -->
+        <div class="col-sm-4 mb-3">
+          <label class="text-primary"><%= t(:facial_hair) %></label>
+          <span class="first-big"><%= t(user.facial_hair) %></span>
+        </div>
+
+        <!-- Голос -->
+        <div class="col-sm-4 mb-3">
+          <label class="text-primary"><%= t(:voice) %></label>
+          <span class="first-big"><%= user.voice ? t(user.voice): ' - ' %></span>
+        </div>
+
+        <!-- Цвет волос -->
+        <div class="col-sm-4 mb-3">
+          <label class="text-primary"><%= t(:hair_color) %><div class="box ms-2" style="background-color: <%= user.hair_color %>;"></div></label>
+        </div>
+
+        <!-- Уши -->
+        <div class="col-sm-4 mb-3">
+          <label class="text-primary"><%= t(:ears) %></label>
+          <span class="first-big"><%= user.ears ? t(user.ears): ' - ' %></span>
+        </div>
+
+        <!-- Морщины -->
+        <div class="col-sm-4 mb-3">
+          <label class="text-primary"><%= t(:wrinkles) %></label>
+          <span class="first-big"><%= t(user.wrinkles) %></span>
+        </div>
+
+        <!-- Лоб -->
+        <div class="col-sm-4 mb-3">
+          <label class="text-primary"><%= t(:forehead) %></label>
+          <span class="first-big"><%= user.forehead ? t(user.forehead): ' - ' %></span>
+        </div>
+      </div>
+
+      <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#ModalUser_<%= user.id %>"><%= t(:show) %></button>
+    </div>
+  </div>
+
+  <div class="modal fade" id="ModalUser_<%= user.id %>" tabindex="0" aria-labelledby="ModalUser_<%= user.id %>" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="ModalUser_<%= user.id %>"><%= t(:respond) %></h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="mb-3">
+              <label for="recipient-name" class="col-form-label"><b><%= t(:post_create) %>:</b> <%= user.searcher_name %></label>
+            </div>
+            <div class="mb-3">
+              <label for="message-text" class="col-form-label" style="font-size:18px;"><b><%= t(:contacts_for_communication) %>:</b></label>
+              <p><b>email:</b> <%= user.searcher_email %></p>
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal"><%= t(:close) %></button>
+        </div>
+      </div>
+    </div>
+  </div>
+<% end %>
+
+<div class="col">
+  <div id="load_more_people_users" class="text-end p-3">
+    <% unless @last_page %>
+      <%= button_to t(:load_more), { controller: 'avoidant', action: "load_more", req_from: 'people' }, method: :get, remote: true, class: "btn btn-primary btn-large" %>
+    <% end %>
+  </div>
+</div>

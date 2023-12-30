@@ -1,0 +1,155 @@
+<div class="row">
+  <h1><%= t(:people_page_title) %></h1>
+  <div class="col-md-12 pt-3">
+    <button class="btn btn-primary" data-bs-toggle="collapse" href="#collapse1"><%= t(:filter) %></button>
+
+    <div id="collapse1" class="collapse" data-bs-parent="#accordion">
+      <div class="card mt-4" style="border-color: #d8e6f0;">
+        <div class="card-body">
+          <div class="col-md-12 pb-3">
+
+            <div class="col">
+              <div id="load_more_users" class="pb-3">
+
+                <%= button_to t(:reset_filter), { action: "reset_filter" }, method: :get, remote: true, class: "btn btn-danger btn-large" %>
+              </div>
+            </div>
+
+            <form action="/avoidant/people?filtered=true" method="get" data-remote="true" id="people_form" accept-charset="UTF-8" data-type="json">
+              <div class="row g-3">
+                <!-- Пол -->
+                <div class="col-sm-4 mb-3">
+                  <div class="form-group">
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="radio" name="filter_request[gender]" id="man" value="м">
+                      <label class="form-check-label" for="man">
+                        <%= t(:man) %>
+                      </label>
+                    </div>
+
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="radio" name="filter_request[gender]" value="ж" id="woman">
+                      <label class="form-check-label" for="woman">
+                        <%= t(:women) %>
+                      </label>
+                    </div>
+
+                  </div>
+                </div>
+
+                <!-- Морщины -->
+                <div class="col-sm-4 mb-3">
+                  <div class="form-group">
+                    <input type="checkbox" class="form-check-input" name="filter_request[wrinkles]" id="wrinkles">
+                    <label class="form-check-label" for="wrinkles"><%= t(:wrinkles) %></label>
+                  </div>
+                </div>
+
+                <!-- Растительность на лице -->
+                <div class="col-sm-4 mb-3">
+                  <div class="form-check">
+                    <input type="checkbox" class="form-check-input" name="filter_request[facial_hair]" id="facial_hair">
+                    <label class="form-check-label" for="facial_hair"><%= t(:facial_hair) %></label>
+                  </div>
+                </div>
+
+                <!-- Рост -->
+                <div class="col-sm-4 mb-3">
+                  <label for="height" class="form-label"><%= t(:height) %> (<%= t(:sm) %>)</label>
+                  <input type="number" min="1" max="350" class="form-control" name="filter_request[height]" id="height" oninput="this.value = (Math.abs(this.value) === 0  && this.value !== '0') ? '': Math.abs(this.value)" value="">
+                </div>
+
+                <!-- Возраст -->
+                <div class="col-sm-4 mb-3">
+                  <label for="age" class="form-label"><%= t(:age) %> (<%= t(:years) %>)</label>
+                  <input type="number" min="1" max="150" class="form-control" name="filter_request[age]" id="age" oninput="this.value = (Math.abs(this.value) === 0  && this.value !== '0') ? '': Math.abs(this.value)" value="">
+                </div>
+
+                <!-- Цвет волос -->
+                <div class="col-sm-4 mb-3">
+                  <label for="hair_color" class="form-label me-1"><%= t(:hair_color) %></label>
+                  <label for="hair_checkbox"></label>
+
+                  <input type="checkbox" class="form-check-input" name="filter_request[hair_checkbox]"
+                         onchange="document.getElementById('hair_color').disabled = !this.checked;" id="hair_checkbox">
+
+                  <input type="color" class="form-control form-control-color" id="hair_color" name="filter_request[hair_color]"
+                         value="" disabled title="Выберите цвет">
+                </div>
+
+                <!-- Раса -->
+                <div class="col-sm-6 mb-3">
+                  <select name="filter_request[race]" class="form-select" aria-label="Human race">
+                    <option value="" selected><%= t(:race) %></option>
+                    <option value="европиоид"><%= t(:caucasoid) %></option>
+                    <option value="негроид"><%= t(:negroid) %></option>
+                    <option value="монголоид"><%= t(:mongoloid) %></option>
+                    <option value="другое"><%= t(:other_race) %></option>
+                  </select>
+                </div>
+
+                <!-- Телосложение -->
+                <div class="col-sm-6 mb-3">
+                  <select name="filter_request[body_type]" class="form-select" aria-label="Body type">
+                    <option value="" selected><%= t(:body) %></option>
+                    <option value="эктоморф" data-toggle="tooltip" title='<%= t(:prone_to_thinness) %>' ><%= t(:ectomorph) %></option>
+                    <option value="мезоморф" data-toggle="tooltip" title='<%= t(:intermediate_shape) %>' ><%= t(:mesomorph) %></option>
+                    <option value="эндоморф" data-toggle="tooltip" title='<%= t(:stocky_type) %>' ><%= t(:endomorph) %></option>
+                  </select>
+                </div>
+
+                <!-- Голос -->
+                <div class="col-sm-6 mb-3">
+                  <select name="filter_request[voice]" class="form-select" aria-label="Voice">
+                    <option value="" selected><%= t(:voice) %></option>
+                    <option value="тенор"><%= t(:tenor) %></option>
+                    <option value="альт"><%= t(:alto) %></option>
+                    <option value="баритон"><%= t(:baritone) %></option>
+                    <option value="контральто"><%= t(:contralto) %></option>
+                    <option value="бас"><%= t(:bass) %></option>
+                    <option value="сопрано"><%= t(:sopranos) %></option>
+                  </select>
+                </div>
+
+                <!-- Лоб -->
+                <div class="col-sm-6 mb-3">
+                  <select name="filter_request[forehead]" class="form-select" aria-label="Voice">
+                    <option value="" selected><%= t(:forehead) %></option>
+                    <option value="прямой скошенный"><%= t(:straight_beveled) %></option>
+                    <option value="покатый"><%= t(:sloping) %></option>
+                    <option value="прямой"><%= t(:straight) %></option>
+                    <option value="округлый"><%= t(:rounded) %></option>
+                    <option value="выпуклый"><%= t(:convex) %></option>
+                    <option value="волнистый скошенный"><%= t(:wavy_beveled) %></option>
+                  </select>
+                </div>
+
+                <!-- Уши -->
+                <div class="mb-3">
+                  <select name="filter_request[ears]" class="form-select" aria-label="Voice">
+                    <option value="" selected><%= t(:ears) %></option>
+                    <option value="круглые"><%= t(:round) %></option>
+                    <option value="угловатые"><%= t(:angular) %></option>
+                    <option value="заостренные"><%= t(:pointed) %></option>
+                    <option value="торчащие"><%= t(:protruding) %></option>
+                    <option value="свободная мочка"><%= t(:loose_lobe) %></option>
+                    <option value="прилегающая мочка"><%= t(:adjacent_lobe) %></option>
+                    <option value="широкая мочка"><%= t(:wide_lobe) %></option>
+                  </select>
+                </div>
+              </div>
+
+              <button type="submit" name="operation" value="filter" class="btn btn-success"><%= t(:apply_filter) %></button>
+            </form>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="users-list">
+      <%= render 'layouts/users_list' %>
+    </div>
+
+  </div>
+</div>

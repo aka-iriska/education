@@ -1,0 +1,15 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @user %>
+
+<div>
+  <% if current_user && current_user.admin == true %>
+    <%= link_to "Отредактировать", edit_user_path(@user) %> |
+  <% end %>
+
+  <%= link_to "Назад к списку пользователей", users_path %>
+
+  <% if current_user && current_user.admin == true %>
+    <%= button_to "Удалить пользователя", @user, method: :delete, class: "btn btn-large btn-primary mt-4" %>
+  <% end %>
+</div>

@@ -1,0 +1,66 @@
+﻿<!DOCTYPE html>
+
+<html lang="ru" dir="ltr">
+<head>
+    <meta charset="utf-8" />
+    <title>Дулина Ирина РК1</title>
+</head>
+<body>
+    <h1>Дулина Ирина ИУ6-35Б</h1>
+    <h2>Вариант 23(переписывание)</h2>
+    <h3>
+        Дан массив чисел arr_n. Определить сумму
+        элементов массива, кратных 3, и поместить ее на
+        место элемента с индексом k, где k введенное
+        значение.
+    </h3>
+        <p>Введите числа через пробел</p>
+        <input type="text" id="mass"  value="1 2 3 1 2 -10 1.4 3 2 16 102 3 0" required/>
+        <br />
+        <p>Введите индекс</p>
+        <input type="number" min='0' id="chislo" name='chislo' value='1' required />
+        <br />
+        <button onclick="change()">Вывести</button>
+        <p id="err"></p>
+        <p id="start"></p>
+        <p id="res"></p>
+    <script type="text/javascript">
+        function change() {
+            //очищаем поля
+            document.getElementById("err").innerHTML = "";
+            document.getElementById("start").innerHTML = "";
+            document.getElementById("res").innerHTML = "";
+
+            if (document.getElementById("mass").value === 0 || document.getElementById("mass").value === '' || document.getElementById("mass").value.split(" ").map(Number).some(isNaN))
+                document.getElementById("err").innerHTML = "Массив чисел не введен";
+            else {
+                let ind = Number(document.getElementById("chislo").value);
+                let array = document.getElementById("mass").value.trim().split(/[\s,]+/).map(Number);//TRIM для удаления пробелов в начале и в конце строки
+                if (ind > (array.length - 1)) {
+                    document.getElementById("err").innerHTML = "Данного индекса не существует в введенном массиве";
+                } else {
+                    console.log('Calc', ind, array);
+                    document.getElementById("start").innerHTML = "Изначальный ряд: <br>" + array.join("\n");
+                    let summ = 0;//сумма элементов массива, кратных 3
+
+                    for (let i = 0; i < array.length; i++) {
+                        if (array[i] % 3 === 0) {
+                            summ += array[i];
+                        }
+                    }
+
+                    if (summ === 0) {
+                        document.getElementById("err").innerHTML = "Нет элементов массива кратных 3";
+                    }
+                    else {
+                        array[ind] = "<b>" + summ.toString() + " </b>";
+                        document.getElementById("res").innerHTML = "Измененный ряд: <br>" + array.join("\n");
+               
+                    }
+                }
+            }
+           
+        }
+    </script>
+</body>
+</html>

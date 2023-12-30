@@ -1,0 +1,164 @@
+<div class="card mt-4">
+  <div class="card-header">
+    <h4><%= t(:description) %></h4>
+  </div>
+  <div class="card-body">
+    <h5><%= t(:description_sub_text) %></h5>
+    <div class="row">
+      <div class="col-md-12">
+
+        <div class="col-md-12">
+          <div class="card mt-4">
+            <div class="card-body">
+
+              <%= form_for(@find) do |f| %>
+                <div class="row g-3">
+                  <!-- Email пользователя, который ищет -->
+                  <div class="col-sm-6 mb-3">
+                    <label for="searcher_email" class="form-label"><%= t(:your_mail) %></label>
+                    <input class="form-control" name="find[searcher_email]" value="<%= current_user.email if current_user %>"
+                           id="searcher_email" required/>
+                  </div>
+
+                  <!-- ФИО пользователя, который ищет -->
+                  <div class="col-sm-6 mb-3">
+                    <label for="searcher_name" class="form-label"><%= t(:your_name) %></label>
+                    <input class="form-control" name="find[searcher_name]" value="<%= current_user.name if current_user %>"
+                           id="searcher_name" required/>
+                  </div>
+
+                  <hr class="border-bottom border-1">
+
+                  <!-- Где увидели -->
+                  <div class="col-sm-12 mb-3">
+                    <label for="address" class="form-label"><%= t(:where_seen) %></label>
+                    <textarea class="form-control" name="find[address]" id="address" rows="2" required></textarea>
+                  </div>
+
+                  <!-- Пол -->
+                  <div class="col-sm-4 mb-3">
+                    <div class="form-group">
+                      <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="find[gender]" id="man" value="м" checked required>
+                        <label class="form-check-label" for="man">
+                          <%= t(:man) %>
+                        </label>
+                      </div>
+
+                      <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="find[gender]" value="ж" id="woman">
+                        <label class="form-check-label" for="woman">
+                          <%= t(:women) %>
+                        </label>
+                      </div>
+
+                    </div>
+                  </div>
+
+                  <!-- Морщины -->
+                  <div class="col-sm-4 mb-3">
+                    <div class="form-group">
+                      <input type="checkbox" class="form-check-input" name="find[wrinkles]" id="wrinkles">
+                      <label class="form-check-label" for="wrinkles"><%= t(:wrinkles) %></label>
+                    </div>
+                  </div>
+
+                  <!-- Растительность на лице -->
+                  <div class="col-sm-4 mb-3">
+                    <div class="form-check">
+                      <input type="checkbox" class="form-check-input" name="find[facial_hair]" id="facial_hair">
+                      <label class="form-check-label" for="facial_hair"><%= t(:facial_hair) %></label>
+                    </div>
+                  </div>
+
+                  <!-- Рост -->
+                  <div class="col-sm-4 mb-3">
+                    <label for="height" class="form-label"><%= t(:height) %> (<%= t(:sm) %>)</label>
+                    <input type="number" min="1" max="350" class="form-control" name="find[height]" id="height" oninput="this.value = (Math.abs(this.value) === 0  && this.value !== '0') ? '': Math.abs(this.value)" value="" required>
+                  </div>
+
+                  <!-- Возраст -->
+                  <div class="col-sm-4 mb-3">
+                    <label for="age" class="form-label"><%= t(:age) %> (<%= t(:years) %>)</label>
+                    <input type="number" min="1" max="150" class="form-control" name="find[age]" id="age" oninput="this.value = (Math.abs(this.value) === 0  && this.value !== '0') ? '': Math.abs(this.value)" value="" required>
+                  </div>
+
+                  <!-- Цвет волос -->
+                  <div class="col-sm-4 mb-3">
+                    <label for="hair_color" class="form-label me-1"><%= t(:hair_color) %></label>
+                    <label for="hair_checkbox"></label>
+                    <input type="checkbox" class="form-check-input" name="find[hair_checkbox]" onchange="document.getElementById('hair_color').disabled = !this.checked;" id="hair_checkbox">
+                    <input type="color" class="form-control form-control-color" id="hair_color" name="find[hair_color]" value="#563d7c" title="Выберите цвет" disabled required>
+                  </div>
+
+                  <!-- Раса -->
+                  <div class="col-sm-6 mb-3">
+                    <select name="find[race]" class="form-select" aria-label="Human race">
+                      <option value="" selected><%= t(:race) %></option>
+                      <option value="европиоид"><%= t(:caucasoid) %></option>
+                      <option value="негроид"><%= t(:negroid) %></option>
+                      <option value="монголоид"><%= t(:mongoloid) %></option>
+                      <option value="другое"><%= t(:other_race) %></option>
+                    </select>
+                  </div>
+
+                  <!-- Телосложение -->
+                  <div class="col-sm-6 mb-3">
+                    <select name="find[body_type]" class="form-select" aria-label="Body type">
+                      <option value="" selected><%= t(:body) %></option>
+                      <option value="эктоморф" data-toggle="tooltip" title='<%= t(:prone_to_thinness) %>' ><%= t(:ectomorph) %></option>
+                      <option value="мезоморф" data-toggle="tooltip" title='<%= t(:intermediate_shape) %>' ><%= t(:mesomorph) %></option>
+                      <option value="эндоморф" data-toggle="tooltip" title='<%= t(:stocky_type) %>' ><%= t(:endomorph) %></option>
+                    </select>
+                  </div>
+
+                  <!-- Голос -->
+                  <div class="col-sm-6 mb-3">
+                    <select name="find[voice]" class="form-select" aria-label="Voice">
+                      <option value="" selected><%= t(:voice) %></option>
+                      <option value="тенор"><%= t(:tenor) %></option>
+                      <option value="альт"><%= t(:alto) %></option>
+                      <option value="баритон"><%= t(:baritone) %></option>
+                      <option value="контральто"><%= t(:contralto) %></option>
+                      <option value="бас"><%= t(:bass) %></option>
+                      <option value="сопрано"><%= t(:sopranos) %></option>
+                    </select>
+                  </div>
+
+                  <!-- Лоб -->
+                  <div class="col-sm-6 mb-3">
+                    <select name="find[forehead]" class="form-select" aria-label="Voice">
+                      <option value="" selected><%= t(:forehead) %></option>
+                      <option value="прямой скошенный"><%= t(:straight_beveled) %></option>
+                      <option value="покатый"><%= t(:sloping) %></option>
+                      <option value="прямой"><%= t(:straight) %></option>
+                      <option value="округлый"><%= t(:rounded) %></option>
+                      <option value="выпуклый"><%= t(:convex) %></option>
+                      <option value="волнистый скошенный"><%= t(:wavy_beveled) %></option>
+                    </select>
+                  </div>
+
+                  <!-- Уши -->
+                  <div class="mb-3">
+                    <select name="find[ears]" class="form-select" aria-label="Voice">
+                      <option value="" selected><%= t(:ears) %></option>
+                      <option value="круглые"><%= t(:round) %></option>
+                      <option value="угловатые"><%= t(:angular) %></option>
+                      <option value="заостренные"><%= t(:pointed) %></option>
+                      <option value="торчащие"><%= t(:protruding) %></option>
+                      <option value="свободная мочка"><%= t(:loose_lobe) %></option>
+                      <option value="прилегающая мочка"><%= t(:adjacent_lobe) %></option>
+                      <option value="широкая мочка"><%= t(:wide_lobe) %></option>
+                    </select>
+                  </div>
+
+                  <button type="submit" class="btn btn-primary"><%= t(:create) %></button>
+                </div>
+              <% end %>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

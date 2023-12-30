@@ -1,0 +1,15 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: Name1
+  email: test1@email.com
+  password_digest: qwerdfgh
+  remember_token: toke1
+  admin: false
+
+two:
+  name: Name2
+  email: test2@email.com
+  password_digest: rtyurtyu
+  remember_token: toke2
+  admin: false

@@ -7,6 +7,7 @@ $(document).ready(function(){
     $("#chisla_form").bind("ajax:success",
         function(xhr, data, status) {
 // data is already an object
+            console.log(data)
             show_result(data)
         })
 })

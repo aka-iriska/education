@@ -1,0 +1,250 @@
+<% @all_searched_users.each_with_index do |searched_user, ind| %>
+  <div class="card position-relative mt-4">
+    <div class="text-right position-absolute top-0 end-0 me-2 mt-1">
+      <span class="badge bg-primary rounded-pill"><%= ind + 1 %></span>
+    </div>
+
+    <div class="card-body">
+      <div class="row g-3">
+
+        <!-- Адрес -->
+        <div class="col-sm-4 mb-3">
+          <label class="text-primary"><%= t(:address) %></label>
+          <span class="first-big"><%= searched_user.address %></span>
+        </div>
+
+        <!-- Пол -->
+        <div class="col-sm-4 mb-3">
+          <label class="text-primary"><%= t(:gender) %></label>
+          <span class="first-big"><%= t(searched_user.gender) %></span>
+        </div>
+
+        <!-- Возрас -->
+        <div class="col-sm-4 mb-3">
+          <label class="text-primary"><%= t(:age) %></label>
+          <span class="first-big"><%= searched_user.age %></span>
+        </div>
+
+        <!-- Телосложение -->
+        <div class="col-sm-4 mb-3">
+          <label class="text-primary"><%= t(:body) %></label>
+          <span class="first-big"><%= searched_user.body_type ? t(searched_user.body_type): ' - ' %></span>
+        </div>
+
+        <!-- Рост -->
+        <div class="col-sm-4 mb-3">
+          <label class="text-primary"><%= t(:height) %></label>
+          <span class="first-big"><%= searched_user.height %></span>
+        </div>
+
+        <!-- Раса -->
+        <div class="col-sm-4 mb-3">
+          <label class="text-primary"><%= t(:race) %></label>
+          <span class="first-big"><%= searched_user.race ? t(searched_user.race): ' - ' %></span>
+        </div>
+
+        <!-- РАстительность на лице -->
+        <div class="col-sm-4 mb-3">
+          <label class="text-primary"><%= t(:facial_hair) %></label>
+          <span class="first-big"><%= t(searched_user.facial_hair) %></span>
+        </div>
+
+        <!-- Голос -->
+        <div class="col-sm-4 mb-3">
+          <label class="text-primary"><%= t(:voice) %></label>
+          <span class="first-big"><%= searched_user.voice ? t(searched_user.voice): ' - ' %></span>
+        </div>
+
+        <!-- Цвет волос -->
+        <div class="col-sm-4 mb-3">
+          <label class="text-primary"><%= t(:hair_color) %><div class="box ms-2" style="background-color: <%= searched_user.hair_color %>;"></div></label>
+        </div>
+
+        <!-- Уши -->
+        <div class="col-sm-4 mb-3">
+          <label class="text-primary"><%= t(:ears) %></label>
+          <span class="first-big"><%= searched_user.ears ? t(searched_user.ears): ' - ' %></span>
+        </div>
+
+        <!-- Морщины -->
+        <div class="col-sm-4 mb-3">
+          <label class="text-primary"><%= t(:wrinkles) %></label>
+          <span class="first-big"><%= t(searched_user.wrinkles) %></span>
+        </div>
+
+        <!-- Лоб -->
+        <div class="col-sm-4 mb-3">
+          <label class="text-primary"><%= t(:forehead) %></label>
+          <span class="first-big"><%= searched_user.forehead ? t(searched_user.forehead): ' - ' %></span>
+        </div>
+      </div>
+
+      <div class="text-end">
+        <%= button_to "people_finds/#{searched_user.id}", method: :delete, class: "btn btn-danger btn-circle btn-circle-sm m-1", id: 'delete-item' do %>
+          <i class="fa fa-trash"></i>
+        <% end %>
+
+        <button type="button" class="btn btn-primary btn-circle btn-circle-sm m-1" data-bs-toggle="modal"
+                data-bs-target="#editModal_<%= searched_user.id %>">
+          <i class="fa fa-edit"></i></button>
+      </div>
+
+      <div class="modal" id="editModal_<%= searched_user.id %>" tabindex="-1" aria-labelledby="editModalLabel_<%= searched_user.id %>" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="editModalLabel_<%= searched_user.id %>"><%= t(:change_post) %></h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+
+              <form accept-charset="UTF-8" action='<%= "people_finds/#{searched_user.id}" %>' method="patch">
+                <div class="row g-3">
+                  <!-- Где увидели -->
+                  <div class="col-sm-12 mb-3">
+                    <label for="address" class="form-label"><%= t(:where_seen) %></label>
+                    <textarea class="form-control" name="find[address]" id="address" rows="2" required><%= searched_user.address %></textarea>
+                  </div>
+
+                  <!-- Пол -->
+                  <div class="col-sm-4 mb-3">
+                    <div class="form-group">
+                      <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="find[gender]" id="man" value="м" <%= 'checked' if searched_user.gender == 'м' %> required>
+                        <label class="form-check-label" for="man">
+                          <%= t(:man) %>
+                        </label>
+                      </div>
+
+                      <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="find[gender]" value="ж"  id="woman" <%= 'checked' if searched_user.gender == 'ж' %> >
+                        <label class="form-check-label" for="woman">
+                          <%= t(:women) %>
+                        </label>
+                      </div>
+
+                    </div>
+                  </div>
+
+                  <!-- Морщины -->
+                  <div class="col-sm-4 mb-3">
+                    <div class="form-group">
+                      <input type="checkbox" class="form-check-input" name="find[wrinkles]" id="wrinkles" <%= 'checked' if searched_user.wrinkles == 'есть' %> >
+                      <label class="form-check-label" for="wrinkles"><%= t(:wrinkles) %></label>
+                    </div>
+                  </div>
+
+                  <!-- Растительность на лице -->
+                  <div class="col-sm-4 mb-3">
+                    <div class="form-check">
+                      <input type="checkbox" class="form-check-input" name="find[facial_hair]" id="facial_hair" <%= 'checked' if searched_user.facial_hair == 'есть' %> >
+                      <label class="form-check-label" for="facial_hair"><%= t(:facial_hair) %></label>
+                    </div>
+                  </div>
+
+                  <!-- Рост -->
+                  <div class="col-sm-4 mb-3">
+                    <label for="height" class="form-label"><%= t(:height) %> (<%= t(:sm) %>)</label>
+                    <input type="number" min="1" max="350" class="form-control" name="find[height]" id="height"
+                           oninput="this.value = (Math.abs(this.value) === 0  && this.value !== '0') ? '': Math.abs(this.value)"
+                           value="<%= searched_user.height %>" required>
+                  </div>
+
+                  <!-- Возраст -->
+                  <div class="col-sm-4 mb-3">
+                    <label for="age" class="form-label"><%= t(:age) %> (<%= t(:years) %>)</label>
+                    <input type="number" min="1" max="150" class="form-control" name="find[age]" id="age"
+                           oninput="this.value = (Math.abs(this.value) === 0  && this.value !== '0') ? '': Math.abs(this.value)"
+                           value="<%= searched_user.age %>" required>
+                  </div>
+
+                  <!-- Цвет волос -->
+                  <div class="col-sm-4 mb-3">
+                    <label for="hair_color" class="form-label me-1"><%= t(:hair_color) %></label>
+                    <label for="hair_checkbox"></label>
+                    <input type="checkbox" class="form-check-input" name="find[hair_checkbox]" onchange="document.getElementById('hair_color_<%= searched_user.id %>').disabled = !this.checked;" id="hair_checkbox">
+                    <input type="color" class="form-control form-control-color" id="hair_color_<%= searched_user.id %>" name="find[hair_color]"
+                           value="<%= searched_user.hair_color %>" title="Выберите цвет" disabled required>
+                  </div>
+
+                  <!-- Раса -->
+                  <div class="col-sm-6 mb-3">
+                    <select name="find[race]" class="form-select" aria-label="Human race">
+                      <option value="" <%= 'selected' if searched_user.race == '' %> ><%= t(:race) %></option>
+                      <option value="европиоид" <%= 'selected' if searched_user.race == 'европиоид' %> ><%= t(:caucasoid) %></option>
+                      <option value="негроид" <%= 'selected' if searched_user.race == 'негроид' %> ><%= t(:negroid) %></option>
+                      <option value="монголоид" <%= 'selected' if searched_user.race == 'монголоид' %> ><%= t(:mongoloid) %></option>
+                      <option value="другое" <%= 'selected' if searched_user.race == 'другое' %> ><%= t(:other_race) %></option>
+                    </select>
+                  </div>
+
+                  <!-- Телосложение -->
+                  <div class="col-sm-6 mb-3">
+                    <select name="find[body_type]" class="form-select" aria-label="Body type">
+                      <option value="" <%= 'selected' if searched_user.body_type == '' %> ><%= t(:body) %></option>
+                      <option value="эктоморф" data-toggle="tooltip" title='<%= t(:prone_to_thinness) %>' <%= 'selected' if searched_user.body_type == 'эктоморф' %> ><%= t(:ectomorph) %></option>
+                      <option value="мезоморф" data-toggle="tooltip" title='<%= t(:intermediate_shape) %>' <%= 'selected' if searched_user.body_type == 'мезоморф' %> ><%= t(:mesomorph) %></option>
+                      <option value="эндоморф" data-toggle="tooltip" title='<%= t(:stocky_type) %>' <%= 'selected' if searched_user.body_type == 'эндоморф' %> ><%= t(:endomorph) %></option>
+                    </select>
+                  </div>
+
+                  <!-- Голос -->
+                  <div class="col-sm-6 mb-3">
+                    <select name="find[voice]" class="form-select" aria-label="Voice">
+                      <option value="" <%= 'selected' if searched_user.voice == '' %> ><%= t(:voice) %></option>
+                      <option value="тенор" <%= 'selected' if searched_user.voice == 'тенор' %> ><%= t(:tenor) %></option>
+                      <option value="альт" <%= 'selected' if searched_user.voice == 'альт' %> ><%= t(:alto) %></option>
+                      <option value="баритон" <%= 'selected' if searched_user.voice == 'баритон' %> ><%= t(:baritone) %></option>
+                      <option value="контральто" <%= 'selected' if searched_user.voice == 'контральто' %> ><%= t(:contralto) %></option>
+                      <option value="бас" <%= 'selected' if searched_user.voice == 'бас' %> ><%= t(:bass) %></option>
+                      <option value="сопрано" <%= 'selected' if searched_user.voice == 'сопрано' %> ><%= t(:sopranos) %></option>
+                    </select>
+                  </div>
+
+                  <!-- Лоб -->
+                  <div class="col-sm-6 mb-3">
+                    <select name="find[forehead]" class="form-select" aria-label="Voice">
+                      <option value="" <%= 'selected' if searched_user.forehead == '' %> ><%= t(:forehead) %></option>
+                      <option value="прямой скошенный" <%= 'selected' if searched_user.forehead == 'прямой скошенный' %> ><%= t(:straight_beveled) %></option>
+                      <option value="покатый" <%= 'selected' if searched_user.forehead == 'покатый' %> ><%= t(:sloping) %></option>
+                      <option value="прямой" <%= 'selected' if searched_user.forehead == 'пямой' %> ><%= t(:straight) %></option>
+                      <option value="округлый" <%= 'selected' if searched_user.forehead == 'округлый' %> ><%= t(:rounded) %></option>
+                      <option value="выпуклый" <%= 'selected' if searched_user.forehead == 'выпуклый' %> ><%= t(:convex) %></option>
+                      <option value="волнистый скошенный" <%= 'selected' if searched_user.forehead == 'волнистый скошенный' %> ><%= t(:wavy_beveled) %></option>
+                    </select>
+                  </div>
+
+                  <!-- Уши -->
+                  <div class="mb-3">
+                    <select name="find[ears]" class="form-select" aria-label="Voice">
+                      <option value="" <%= 'selected' if searched_user.ears == '' %> ><%= t(:ears) %></option>
+                      <option value="круглые" <%= 'selected' if searched_user.ears == 'круглые' %> ><%= t(:round) %></option>
+                      <option value="угловатые" <%= 'selected' if searched_user.ears == 'угловатые' %> ><%= t(:angular) %></option>
+                      <option value="заостренные" <%= 'selected' if searched_user.ears == 'заостренные' %> ><%= t(:pointed) %></option>
+                      <option value="торчащие" <%= 'selected' if searched_user.ears == 'торчащие' %> ><%= t(:protruding) %></option>
+                      <option value="свободная мочка" <%= 'selected' if searched_user.ears == 'свободная мочка' %> ><%= t(:loose_lobe) %></option>
+                      <option value="прилегающая мочка" <%= 'selected' if searched_user.ears == 'прилегающая мочка' %> ><%= t(:adjacent_lobe) %></option>
+                      <option value="широкая мочка" <%= 'selected' if searched_user.ears == 'широкая мочка' %> ><%= t(:wide_lobe) %></option>
+                    </select>
+                  </div>
+
+                  <button type="submit" class="btn btn-primary"><%= t(:edit) %></button>
+                </div>
+              </form>
+
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+<% end %>
+
+<div class="col">
+  <div id="load_more_home_users" class="text-end p-3">
+    <% unless @last_page %>
+      <%= button_to t(:load_more), { controller: 'avoidant', action: 'load_more', req_from: 'home' }, method: :get, remote: true, format: :js, class: "btn btn-primary btn-large" %>
+    <% end %>
+  </div>
+</div>

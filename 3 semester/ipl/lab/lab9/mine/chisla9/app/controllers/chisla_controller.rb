@@ -2,16 +2,19 @@
 
 class ChislaController < ApplicationController
   def input
-    puts params
-    res = params[:str].split.map(&:to_i)
-    @result = create(res)
-    #{ type: @result[1].class.to_s, value: @result[1]}
-    respond_to do |format|
-      format.html
-      format.json do
-        render json:
-                 { type: @result[1].class.to_s, value: @result[1] }
+    if params[:str]
+      puts params
+      res = params[:str].split.map(&:to_i)
+      @result = create(res)
+      #{ type: @result[1].class.to_s, value: @result[1]}
+      respond_to do |format|
+        format.html
+        format.json do
+          render json:
+                   { type: @result[1].class.to_s, value: @result[1] }
+        end
       end
+      else @result =['','']
     end
   end
 

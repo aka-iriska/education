@@ -1,0 +1,158 @@
+en:
+  # Названия страниц
+  main: 'Main'
+  people: 'People'
+  create_post: 'Create post'
+
+  # Элементы фильтра
+  filter: 'Filter'
+  reset_filter: 'Reset filter'
+  apply_filter: 'Apply filter'
+
+  # Аккаунт
+  account: 'Account'
+  sign_in: 'Sign in'
+  sign_up: 'Sign up'
+  sign_out: 'Sign out'
+  login: 'Login'
+  language: 'Language'
+
+  # Регистрация, вход и т.п.
+  name: 'Name'
+  password: 'Password'
+  confirm_password: 'Confirm password'
+  not_registered_yet: 'Not registered yet?'
+  sign_up_now: 'Sign up now!'
+  already_signup: 'Already sign up?'
+
+  looking_for_you: 'Looking for you'
+  looking_for_you_description: 'The portal "Looking for you", here people can create a post about a person seen on the street or in any public place'
+  people_page_title: 'The people they are looking for'
+  show: 'Show'
+
+  # Создание поста
+  your_mail: 'Your email'
+  your_name: 'Your name'
+  address: 'Address'
+  gender: 'Gender'
+  age: 'Age'
+  body: 'Body'
+  height: 'Height'
+  race: 'Race'
+  facial_hair: 'Facial hair'
+  voice: 'Voice'
+  hair_color: 'Hair color'
+  ears: 'Ears'
+  wrinkles: 'Wrinkles'
+  forehead: 'Forehead'
+  where_seen: 'Where the person was seen (address/place)'
+
+  create: 'Create'
+
+  sm: 'sm'
+  years: 'years'
+
+  description: 'Description'
+  description_sub_text: 'Enter the main characteristics of the person you want to find'
+
+  man: 'M'
+  women: 'W'
+  м: 'M'
+  ж: 'W'
+
+  # Телосложение
+  ectomorph: 'Ectomorph'
+  mesomorph: 'Mesomorph'
+  endomorph: 'Endomorph'
+
+  эктоморф: 'Ectomorph'
+  мезоморф: 'Mesomorph'
+  эндоморф: 'Endomorph'
+  prone_to_thinness: 'The type prone to thinness'
+  intermediate_shape: 'Intermediate shape type'
+  stocky_type: 'The «stocky» type, prone to fatness'
+
+  # Голос
+  tenor: 'Tenor'
+  alto: 'Alto'
+  baritone: 'Baritone'
+  contralto: 'Contralto'
+  bass: 'Bass'
+  sopranos: 'Sopranos'
+
+  тенор: 'Tenor'
+  альт: 'Alto'
+  баритон: 'Baritone'
+  контральто: 'Contralto'
+  бас: 'Bass'
+  сопрано: 'Sopranos'
+
+  # Раса
+  caucasoid: 'Caucasoid'
+  negroid: 'Negroid'
+  mongoloid: 'Mongoloid'
+  other_race: 'Other'
+
+  европиоид: 'Caucasoid'
+  негроид: 'Negroid'
+  монголоид: 'Mongoloid'
+  другое: 'Other'
+
+  # Лоб
+  прямой скошенный: 'Straight beveled'
+  покатый: 'Sloping'
+  прямой: 'Straight'
+  округлый: 'Rounded'
+  выпуклый: 'Convex'
+  волнистый скошенный: 'Wavy beveled'
+
+  straight_beveled: 'Straight beveled'
+  sloping: 'Sloping'
+  straight: 'Straight'
+  rounded: 'Rounded'
+  convex: 'Convex'
+  wavy_beveled: 'Wavy beveled'
+
+  # Уши
+  round: 'Round'
+  angular: 'Angular'
+  pointed: 'Pointed'
+  protruding: 'Protruding'
+  loose_lobe: 'Loose lobe'
+  adjacent_lobe: 'Adjacent lobe'
+  wide_lobe: 'Wide lobe'
+
+  круглые: 'Round'
+  угловатые: 'Angular'
+  заостренные: 'Pointed'
+  торчащие: 'Protruding'
+  свободная мочка: 'Loose lobe'
+  прилегающая мочка: 'Adjacent lobe'
+  широкая мочка: 'Wide lobe'
+
+  respond: 'Respond'
+  close: 'Close'
+  contacts_for_communication: 'Contacts for communication'
+  post_create: 'The post has been created'
+  load_more: 'Load more'
+
+  есть: 'yes'
+  нет: 'no'
+
+  # Flash
+  successfully_logged: 'You have successfully logged in'
+  incorrect_data: 'Incorrect data'
+  wrong_pwd: 'Wrong password'
+  wrong_conformation_pwd: 'The confirmation password is entered incorrectly'
+  user_does_not_exist: 'The user does not exist'
+  thanks_for_sign_up: 'Thank you for registering'
+  enter_correct_email: 'Enter an existing email'
+  user_already_sign_up: 'The user is already registered'
+  signin_or_signup: 'Sign in or sign up'
+  search_request_created: 'The search request has been created'
+  error: 'Error'
+  post_removed: 'The post has been deleted'
+
+  change_post: 'Change post'
+  edit: 'Edit'
+  post_updated: 'Post updated'

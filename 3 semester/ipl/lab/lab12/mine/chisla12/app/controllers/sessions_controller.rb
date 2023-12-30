@@ -19,7 +19,7 @@ class SessionsController < ApplicationController
       if !user
         msg_text = 'Пользователя не существует'
         msg_status = :danger
-      elsif user!=User.authenticate(params[:session][:email],params[:session][:password])
+      elsif user!=User.authenticate(email, password)
         msg_text = 'Неверный пароль'
         msg_status = :danger
       end

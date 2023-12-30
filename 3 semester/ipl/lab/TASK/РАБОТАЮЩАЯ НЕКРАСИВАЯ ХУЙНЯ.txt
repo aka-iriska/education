@@ -1,0 +1,116 @@
+РАБОТАЮЩАЯ НЕКРАСИВАЯ ХУЙНЯ
+<div class="row">
+  <div class="span6 offset3">
+    <%= form_with(model: note) do |form| %>
+      <% if note.errors.any? %>
+        <div style="color: red">
+          <h2><%= pluralize(note.errors.count, "error") %> prohibited this note from being saved:</h2>
+
+          <ul>
+            <% note.errors.each do |error| %>
+              <li><%= error.full_message %></li>
+            <% end %>
+          </ul>
+        </div>
+      <% end %>
+
+      <div>
+        <%= form.label 'Дата', style: "display: block" %>
+        <%= form.date_field :day_date, required: true %>
+      </div>
+      <div>
+        <%= form.label 'Задание', style: "display: block" %>
+        <%= form.text_field :task, required: true %>
+      </div>
+      <div>
+        <%= form.label 'Время', style: "display: block" %>
+        <%= form.text_field :time %>
+      </div>
+      <div>
+        <%= form.label 'Цвет', style: "display: block" %>
+        <%= form.color_field :colour %>
+      </div>
+     <!--<div>
+        <label for="exampleColorInput" class="form-label">Color picker</label>
+        <input type="color" class="form-control form-control-color" id="exampleColorInput"
+               value="#f9fbf7" title="Choose your color">
+      </div>
+      <label for="exampleColorInput" class="form-label">Color picker</label>
+      <input type="color" class="form-control form-control-color" id="exampleColorInput" value="#563d7c" title="Choose your color">
+      <div>
+
+      </div>-->
+
+      <div>
+        <%= form.submit %>
+      </div>
+    <% end %>
+  </div>
+</div>
+###############РАЮОТАЮЩАЯ ЧЕРЕЗ РУБИ КРАСИВАЯ
+###############РАБОТАЮЩАЯ ЧЕРЕЗ HTML КРАСИВАЯ
+<div class="row">
+  <div class="span6 offset3">
+    <form action="/notes" accept-charset="UTF-8" method="post">
+      <input type="hidden" name="authenticity_token" value="HlDy-2RNnb6u6iLYIUEISEyy9HrBLzniqJenvZnviv2vzI72wn8vD1b8swNXZfROCZOVocW259bE9p9f7lGETg" autocomplete="off">
+
+      <div>
+        <label style="display: block" for="note_Дата">Дата</label>
+        <input required="required" type="date" name="note[day_date]" id="note_day_date">
+      </div>
+      <div>
+        <label style="display: block" for="note_Задание">Задание</label>
+        <input required="required" type="text" name="note[task]" id="note_task">
+      </div>
+      <div>
+        <label style="display: block" for="note_Время">Время</label>
+        <input type="text" name="note[time]" id="note_time">
+      </div>
+      <div>
+        <label class="form-label" for="note_Цвет">Цвет</label>
+        <input value="#f9fbf7" type="color" class="form-control form-control-color" name="note[colour]" id="note_colour">
+      </div>
+      <!--<div>
+         <label for="exampleColorInput" class="form-label">Color picker</label>
+         <input type="color" class="form-control form-control-color" id="exampleColorInput"
+                value="#f9fbf7" title="Choose your color">
+       </div>
+       <label for="exampleColorInput" class="form-label">Color picker</label>
+       <input type="color" class="form-control form-control-color" id="exampleColorInput" value="#563d7c" title="Choose your color">
+       <div>
+
+       </div>-->
+
+      <div>
+        <input type="submit" name="commit" value="Create Note" data-disable-with="Create Note">
+      </div>
+    </form>  </div>
+</div>
+
+
+#################################MENU
+<div class="card rounded border-0 shadow-sm position-relative">
+      <div class="card-body p-5">
+        <div class="d-flex align-items-center mb-4 pb-4 border-bottom"><i class="far fa-calendar-alt fa-3x"></i>
+          <div class="ms-3">
+            <h4 class="text-uppercase fw-weight-bold mb-0"><%= Note.all[-1].day_date %></h4>
+            <p class="text-gray fst-italic mb-0"><%= Note.all[-1].week_day %></p>
+          </div>
+        </div>
+        <!--начало каждой новой задачи-->
+        <div class="card" style="background-color: <%= Note.all[-1].colour %>;">
+          <div class="form-check mb-3">
+            <input class="form-check-input" id="flexCheck1" type="checkbox">
+            <label class="form-check-label" for="flexCheck1"><span class="fst-italic pl-1">Buy a new sweatshirt</span></label>
+          </div>
+        </div>
+        <div class="form-check mb-3">
+          <input class="form-check-input" id="flexChec2" type="checkbox">
+          <label class="form-check-label" for="flexChec2"><span class="fst-italic pl-1">Try not to fall asleep</span></label>
+        </div>
+        <div class="form-check mb-3">
+          <input class="form-check-input" id="flexCheck3" type="checkbox">
+          <label class="form-check-label" for="flexCheck3"><span class="fst-italic pl-1">Begin QA for the product</span></label>
+        </div>
+      </div>
+    </div>

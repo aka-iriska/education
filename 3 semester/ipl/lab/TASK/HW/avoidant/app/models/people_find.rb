@@ -1,0 +1,2 @@
+class PeopleFind < ApplicationRecord
+end

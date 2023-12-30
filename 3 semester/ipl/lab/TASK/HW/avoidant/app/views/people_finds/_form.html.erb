@@ -1,0 +1,77 @@
+<%= form_with(model: people_find) do |form| %>
+  <% if people_find.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(people_find.errors.count, "error") %> prohibited this find from being saved:</h2>
+
+      <ul>
+        <% people_find.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :address, style: "display: block" %>
+    <%= form.text_field :address %>
+  </div>
+
+  <div>
+    <%= form.label :conditions, style: "display: block" %>
+    <%= form.text_field :conditions %>
+  </div>
+
+  <div>
+    <%= form.label :gender, style: "display: block" %>
+    <%= form.text_field :gender %>
+  </div>
+
+  <div>
+    <%= form.label :age, style: "display: block" %>
+    <%= form.number_field :age %>
+  </div>
+
+  <div>
+    <%= form.label :body_type, style: "display: block" %>
+    <%= form.text_field :body_type %>
+  </div>
+
+  <div>
+    <%= form.label :height, style: "display: block" %>
+    <%= form.text_field :height %>
+  </div>
+
+  <div>
+    <%= form.label :race, style: "display: block" %>
+    <%= form.text_field :race %>
+  </div>
+
+  <div>
+    <%= form.label :facial_hair, style: "display: block" %>
+    <%= form.check_box :facial_hair %>
+  </div>
+
+  <div>
+    <%= form.label :voice, style: "display: block" %>
+    <%= form.text_field :voice %>
+  </div>
+
+  <div>
+    <%= form.label :hair_color, style: "display: block" %>
+    <%= form.text_field :hair_color %>
+  </div>
+
+  <div>
+    <%= form.label :ears, style: "display: block" %>
+    <%= form.text_field :ears %>
+  </div>
+
+  <div>
+    <%= form.label :wrinkles, style: "display: block" %>
+    <%= form.check_box :wrinkles %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>

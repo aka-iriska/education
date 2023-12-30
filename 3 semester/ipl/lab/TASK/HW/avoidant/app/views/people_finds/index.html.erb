@@ -1,0 +1,14 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Search requests</h1>
+
+<div id="finds">
+  <% @finds.each do |find| %>
+    <%= render find %>
+    <p>
+      <%= link_to "Просмотреть эту сущность", find %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "New search request", new_people_find_path %>

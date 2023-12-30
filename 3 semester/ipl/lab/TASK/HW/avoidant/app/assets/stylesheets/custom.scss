@@ -1,0 +1,25 @@
+@import "bootstrap";
+
+.primary-bg {
+  background-color: #d8e6f0;
+}
+
+.first-big {
+  text-transform: capitalize;
+}
+
+.box {
+  float: right;
+  height: 24px;
+  width: 24px;
+  border-radius: 25%;
+  clear: both;
+}
+
+.btn.btn-rounded {
+  border-radius: 50%;
+}
+
+.hovered_card:hover {
+  transform: scale(1.002);
+}
