@@ -1,0 +1,1032 @@
+********************************************************************************
+***                       Micro-Cap 12.2.0.5 (64 bit)                        ***
+***                                                                          ***
+***                                                                          ***
+***                           AC Analysis of part2                           ***
+***                           08.03.2024 16:12:16                            ***
+********************************************************************************
+Limits
+======
+Frequency Range          Log 3Meg,0.5Meg
+Number of Points         1001
+Temperature              Linear 27
+Maximum Change %         5
+Noise Input              NONE
+Noise Output             2
+Run Options              Normal
+State Variables          Zero
+Operating Point          On
+Auto Scale Ranges        On
+Accumulate Plots         On
+Ignore Expression Errors Off
+
+Stepping Options
+================
+Stepping is Nested
+
+Step What  VB dc.value
+From       0
+To         8
+Step Value 1
+Method     Linear
+
+
+
+*****************************************************
+***                     Run=1                     ***
+***                Temperature=27                 ***
+***                     VB=0                      ***
+*****************************************************
+
+Run=1 Temperature=27 VB=0
+
+DC Operating Point Voltages
+===========================
+Node         Voltage  Node         Voltage  Node         Voltage 
+1        -6.478E-023  2             0.000   3             0.000  
+4             0.000   5             0.000  
+
+DC Operating Point Inductor Current
+===================================
+Inductor     Current 
+L1            0.000  
+
+
+Operating Point for Devices of Type Diode
+=========================================
+Instance:                D1
+Using model:          D815V
+
+Capacitance Terms:
+CAP                 76.320p
+
+Current Terms:
+ID              -6.478E-035
+
+Resistance Terms:
+REQ              909.987MEG
+
+Voltage Terms:
+VD              -6.478E-023
+
+Power DC Terms:
+PD               4.196E-057
+PS                   0.000 
+
+DC Pin Currents:
+Id              -6.478E-035
+
+Condition:
+State                   OFF
+
+Device Variables:
+area                 1.000 
+ic                   0.000 
+
+
+
+Operating Point for Devices of Type Resistor
+============================================
+Instance:                 R1             RI             RB
+V                     0.000          0.000      6.478E-023
+Power DC Terms:
+PD                    0.000          0.000      1.777E-049
+
+DC Pin Currents:
+Ir                    0.000          0.000      2.743E-027
+
+Device Variables:
+tc1                   0.000          0.000          0.000 
+tc2                   0.000          0.000          0.000 
+
+
+
+Operating Point for Devices of Type Inductor
+============================================
+Instance:                 L1
+V                     0.000 
+Power DC Terms:
+PS                    0.000 
+
+DC Pin Currents:
+Il                    0.000 
+
+Device Variables:
+ic                    0.000 
+
+
+
+Operating Point for Devices of Type Capacitor
+=============================================
+Instance:                 C1             CP
+V                     0.000     -6.478E-023
+Power DC Terms:
+PS                    0.000          0.000 
+
+DC Pin Currents:
+Ic                    0.000          0.000 
+
+Device Variables:
+ic                    0.000          0.000 
+
+
+
+Operating Point for Devices of Type SPICE Source
+================================================
+Instance:                V1             VB
+V                    0.000          0.000 
+Power DC Terms:
+PG                   0.000          0.000 
+
+DC Pin Currents:
+ISource              0.000      2.743E-027
+
+
+
+*****************************************************
+***                     Run=1                     ***
+***                Temperature=27                 ***
+***                     VB=1                      ***
+*****************************************************
+
+Run=1 Temperature=27 VB=1
+
+DC Operating Point Voltages
+===========================
+Node         Voltage  Node         Voltage  Node         Voltage 
+1          -999.999m  2             0.000   3            -1.000  
+4             0.000   5             0.000  
+
+DC Operating Point Inductor Current
+===================================
+Inductor     Current 
+L1            0.000  
+
+
+Operating Point for Devices of Type Diode
+=========================================
+Instance:               D1
+Using model:         D815V
+
+Capacitance Terms:
+CAP                58.408p
+
+Current Terms:
+ID                -53.250p
+
+Resistance Terms:
+REQ               999.999G
+
+Voltage Terms:
+VD               -999.999m
+
+Power DC Terms:
+PD                 53.250p
+PS                  0.000 
+
+DC Pin Currents:
+Id                -53.250p
+
+Condition:
+State                  OFF
+
+Device Variables:
+area                1.000 
+ic                  0.000 
+
+
+
+Operating Point for Devices of Type Resistor
+============================================
+Instance:                R1            RI            RB
+V                    0.000         0.000        -1.258u
+Power DC Terms:
+PD                   0.000         0.000         0.067f
+
+DC Pin Currents:
+Ir                   0.000         0.000       -53.250p
+
+Device Variables:
+tc1                  0.000         0.000         0.000 
+tc2                  0.000         0.000         0.000 
+
+
+
+Operating Point for Devices of Type Inductor
+============================================
+Instance:                L1
+V                    0.000 
+Power DC Terms:
+PS                   0.000 
+
+DC Pin Currents:
+Il                   0.000 
+
+Device Variables:
+ic                   0.000 
+
+
+
+Operating Point for Devices of Type Capacitor
+=============================================
+Instance:                C1            CP
+V                    0.000      -999.999m
+Power DC Terms:
+PS                   0.000         0.000 
+
+DC Pin Currents:
+Ic                   0.000         0.000 
+
+Device Variables:
+ic                   0.000         0.000 
+
+
+
+Operating Point for Devices of Type SPICE Source
+================================================
+Instance:               V1            VB
+V                   0.000         1.000 
+Power DC Terms:
+PG                  0.000        53.250p
+
+DC Pin Currents:
+ISource             0.000       -53.250p
+
+
+
+*****************************************************
+***                     Run=1                     ***
+***                Temperature=27                 ***
+***                     VB=2                      ***
+*****************************************************
+
+Run=1 Temperature=27 VB=2
+
+DC Operating Point Voltages
+===========================
+Node         Voltage  Node         Voltage  Node         Voltage 
+1            -2.000   2             0.000   3            -2.000  
+4             0.000   5             0.000  
+
+DC Operating Point Inductor Current
+===================================
+Inductor     Current 
+L1            0.000  
+
+
+Operating Point for Devices of Type Diode
+=========================================
+Instance:               D1
+Using model:         D815V
+
+Capacitance Terms:
+CAP                50.706p
+
+Current Terms:
+ID                -54.250p
+
+Resistance Terms:
+REQ                 1.000T
+
+Voltage Terms:
+VD                 -2.000 
+
+Power DC Terms:
+PD                108.500p
+PS                  0.000 
+
+DC Pin Currents:
+Id                -54.250p
+
+Condition:
+State                  OFF
+
+Device Variables:
+area                1.000 
+ic                  0.000 
+
+
+
+Operating Point for Devices of Type Resistor
+============================================
+Instance:                R1            RI            RB
+V                    0.000         0.000        -1.281u
+Power DC Terms:
+PD                   0.000         0.000         0.070f
+
+DC Pin Currents:
+Ir                   0.000         0.000       -54.250p
+
+Device Variables:
+tc1                  0.000         0.000         0.000 
+tc2                  0.000         0.000         0.000 
+
+
+
+Operating Point for Devices of Type Inductor
+============================================
+Instance:                L1
+V                    0.000 
+Power DC Terms:
+PS                   0.000 
+
+DC Pin Currents:
+Il                   0.000 
+
+Device Variables:
+ic                   0.000 
+
+
+
+Operating Point for Devices of Type Capacitor
+=============================================
+Instance:                C1            CP
+V                    0.000        -2.000 
+Power DC Terms:
+PS                   0.000         0.000 
+
+DC Pin Currents:
+Ic                   0.000         0.000 
+
+Device Variables:
+ic                   0.000         0.000 
+
+
+
+Operating Point for Devices of Type SPICE Source
+================================================
+Instance:               V1            VB
+V                   0.000         2.000 
+Power DC Terms:
+PG                  0.000       108.500p
+
+DC Pin Currents:
+ISource             0.000       -54.250p
+
+
+
+*****************************************************
+***                     Run=1                     ***
+***                Temperature=27                 ***
+***                     VB=3                      ***
+*****************************************************
+
+Run=1 Temperature=27 VB=3
+
+DC Operating Point Voltages
+===========================
+Node         Voltage  Node         Voltage  Node         Voltage 
+1            -3.000   2             0.000   3            -3.000  
+4             0.000   5             0.000  
+
+DC Operating Point Inductor Current
+===================================
+Inductor     Current 
+L1            0.000  
+
+
+Operating Point for Devices of Type Diode
+=========================================
+Instance:               D1
+Using model:         D815V
+
+Capacitance Terms:
+CAP                46.030p
+
+Current Terms:
+ID                -55.250p
+
+Resistance Terms:
+REQ                 1.000T
+
+Voltage Terms:
+VD                 -3.000 
+
+Power DC Terms:
+PD                165.750p
+PS                  0.000 
+
+DC Pin Currents:
+Id                -55.250p
+
+Condition:
+State                  OFF
+
+Device Variables:
+area                1.000 
+ic                  0.000 
+
+
+
+Operating Point for Devices of Type Resistor
+============================================
+Instance:                R1            RI            RB
+V                    0.000         0.000        -1.305u
+Power DC Terms:
+PD                   0.000         0.000         0.072f
+
+DC Pin Currents:
+Ir                   0.000         0.000       -55.250p
+
+Device Variables:
+tc1                  0.000         0.000         0.000 
+tc2                  0.000         0.000         0.000 
+
+
+
+Operating Point for Devices of Type Inductor
+============================================
+Instance:                L1
+V                    0.000 
+Power DC Terms:
+PS                   0.000 
+
+DC Pin Currents:
+Il                   0.000 
+
+Device Variables:
+ic                   0.000 
+
+
+
+Operating Point for Devices of Type Capacitor
+=============================================
+Instance:                C1            CP
+V                    0.000        -3.000 
+Power DC Terms:
+PS                   0.000         0.000 
+
+DC Pin Currents:
+Ic                   0.000         0.000 
+
+Device Variables:
+ic                   0.000         0.000 
+
+
+
+Operating Point for Devices of Type SPICE Source
+================================================
+Instance:               V1            VB
+V                   0.000         3.000 
+Power DC Terms:
+PG                  0.000       165.750p
+
+DC Pin Currents:
+ISource             0.000       -55.250p
+
+
+
+*****************************************************
+***                     Run=1                     ***
+***                Temperature=27                 ***
+***                     VB=4                      ***
+*****************************************************
+
+Run=1 Temperature=27 VB=4
+
+DC Operating Point Voltages
+===========================
+Node         Voltage  Node         Voltage  Node         Voltage 
+1            -4.000   2             0.000   3            -4.000  
+4             0.000   5             0.000  
+
+DC Operating Point Inductor Current
+===================================
+Inductor     Current 
+L1            0.000  
+
+
+Operating Point for Devices of Type Diode
+=========================================
+Instance:               D1
+Using model:         D815V
+
+Capacitance Terms:
+CAP                42.762p
+
+Current Terms:
+ID                -56.250p
+
+Resistance Terms:
+REQ                 1.000T
+
+Voltage Terms:
+VD                 -4.000 
+
+Power DC Terms:
+PD                225.000p
+PS                  0.000 
+
+DC Pin Currents:
+Id                -56.250p
+
+Condition:
+State                  OFF
+
+Device Variables:
+area                1.000 
+ic                  0.000 
+
+
+
+Operating Point for Devices of Type Resistor
+============================================
+Instance:                R1            RI            RB
+V                    0.000         0.000        -1.328u
+Power DC Terms:
+PD                   0.000         0.000         0.075f
+
+DC Pin Currents:
+Ir                   0.000         0.000       -56.250p
+
+Device Variables:
+tc1                  0.000         0.000         0.000 
+tc2                  0.000         0.000         0.000 
+
+
+
+Operating Point for Devices of Type Inductor
+============================================
+Instance:                L1
+V                    0.000 
+Power DC Terms:
+PS                   0.000 
+
+DC Pin Currents:
+Il                   0.000 
+
+Device Variables:
+ic                   0.000 
+
+
+
+Operating Point for Devices of Type Capacitor
+=============================================
+Instance:                C1            CP
+V                    0.000        -4.000 
+Power DC Terms:
+PS                   0.000         0.000 
+
+DC Pin Currents:
+Ic                   0.000         0.000 
+
+Device Variables:
+ic                   0.000         0.000 
+
+
+
+Operating Point for Devices of Type SPICE Source
+================================================
+Instance:               V1            VB
+V                   0.000         4.000 
+Power DC Terms:
+PG                  0.000       225.000p
+
+DC Pin Currents:
+ISource             0.000       -56.250p
+
+
+
+*****************************************************
+***                     Run=1                     ***
+***                Temperature=27                 ***
+***                     VB=5                      ***
+*****************************************************
+
+Run=1 Temperature=27 VB=5
+
+DC Operating Point Voltages
+===========================
+Node         Voltage  Node         Voltage  Node         Voltage 
+1            -5.000   2             0.000   3            -5.000  
+4             0.000   5             0.000  
+
+DC Operating Point Inductor Current
+===================================
+Inductor     Current 
+L1            0.000  
+
+
+Operating Point for Devices of Type Diode
+=========================================
+Instance:               D1
+Using model:         D815V
+
+Capacitance Terms:
+CAP                40.294p
+
+Current Terms:
+ID                -57.250p
+
+Resistance Terms:
+REQ                 1.000T
+
+Voltage Terms:
+VD                 -5.000 
+
+Power DC Terms:
+PD                286.250p
+PS                  0.000 
+
+DC Pin Currents:
+Id                -57.250p
+
+Condition:
+State                  OFF
+
+Device Variables:
+area                1.000 
+ic                  0.000 
+
+
+
+Operating Point for Devices of Type Resistor
+============================================
+Instance:                R1            RI            RB
+V                    0.000         0.000        -1.352u
+Power DC Terms:
+PD                   0.000         0.000         0.077f
+
+DC Pin Currents:
+Ir                   0.000         0.000       -57.250p
+
+Device Variables:
+tc1                  0.000         0.000         0.000 
+tc2                  0.000         0.000         0.000 
+
+
+
+Operating Point for Devices of Type Inductor
+============================================
+Instance:                L1
+V                    0.000 
+Power DC Terms:
+PS                   0.000 
+
+DC Pin Currents:
+Il                   0.000 
+
+Device Variables:
+ic                   0.000 
+
+
+
+Operating Point for Devices of Type Capacitor
+=============================================
+Instance:                C1            CP
+V                    0.000        -5.000 
+Power DC Terms:
+PS                   0.000         0.000 
+
+DC Pin Currents:
+Ic                   0.000         0.000 
+
+Device Variables:
+ic                   0.000         0.000 
+
+
+
+Operating Point for Devices of Type SPICE Source
+================================================
+Instance:               V1            VB
+V                   0.000         5.000 
+Power DC Terms:
+PG                  0.000       286.250p
+
+DC Pin Currents:
+ISource             0.000       -57.250p
+
+
+
+*****************************************************
+***                     Run=1                     ***
+***                Temperature=27                 ***
+***                     VB=6                      ***
+*****************************************************
+
+Run=1 Temperature=27 VB=6
+
+DC Operating Point Voltages
+===========================
+Node         Voltage  Node         Voltage  Node         Voltage 
+1            -6.000   2             0.000   3            -6.000  
+4             0.000   5             0.000  
+
+DC Operating Point Inductor Current
+===================================
+Inductor     Current 
+L1            0.000  
+
+
+Operating Point for Devices of Type Diode
+=========================================
+Instance:               D1
+Using model:         D815V
+
+Capacitance Terms:
+CAP                38.334p
+
+Current Terms:
+ID                -58.250p
+
+Resistance Terms:
+REQ                 1.000T
+
+Voltage Terms:
+VD                 -6.000 
+
+Power DC Terms:
+PD                349.500p
+PS                  0.000 
+
+DC Pin Currents:
+Id                -58.250p
+
+Condition:
+State                  OFF
+
+Device Variables:
+area                1.000 
+ic                  0.000 
+
+
+
+Operating Point for Devices of Type Resistor
+============================================
+Instance:                R1            RI            RB
+V                    0.000         0.000        -1.376u
+Power DC Terms:
+PD                   0.000         0.000         0.080f
+
+DC Pin Currents:
+Ir                   0.000         0.000       -58.250p
+
+Device Variables:
+tc1                  0.000         0.000         0.000 
+tc2                  0.000         0.000         0.000 
+
+
+
+Operating Point for Devices of Type Inductor
+============================================
+Instance:                L1
+V                    0.000 
+Power DC Terms:
+PS                   0.000 
+
+DC Pin Currents:
+Il                   0.000 
+
+Device Variables:
+ic                   0.000 
+
+
+
+Operating Point for Devices of Type Capacitor
+=============================================
+Instance:                C1            CP
+V                    0.000        -6.000 
+Power DC Terms:
+PS                   0.000         0.000 
+
+DC Pin Currents:
+Ic                   0.000         0.000 
+
+Device Variables:
+ic                   0.000         0.000 
+
+
+
+Operating Point for Devices of Type SPICE Source
+================================================
+Instance:               V1            VB
+V                   0.000         6.000 
+Power DC Terms:
+PG                  0.000       349.500p
+
+DC Pin Currents:
+ISource             0.000       -58.250p
+
+
+
+*****************************************************
+***                     Run=1                     ***
+***                Temperature=27                 ***
+***                     VB=7                      ***
+*****************************************************
+
+Run=1 Temperature=27 VB=7
+
+DC Operating Point Voltages
+===========================
+Node         Voltage  Node         Voltage  Node         Voltage 
+1            -7.000   2             0.000   3            -7.000  
+4             0.000   5             0.000  
+
+DC Operating Point Inductor Current
+===================================
+Inductor     Current 
+L1            0.000  
+
+
+Operating Point for Devices of Type Diode
+=========================================
+Instance:               D1
+Using model:         D815V
+
+Capacitance Terms:
+CAP                36.723p
+
+Current Terms:
+ID                -59.250p
+
+Resistance Terms:
+REQ               998.825G
+
+Voltage Terms:
+VD                 -7.000 
+
+Power DC Terms:
+PD                414.750p
+PS                  0.000 
+
+DC Pin Currents:
+Id                -59.250p
+
+Condition:
+State                  OFF
+
+Device Variables:
+area                1.000 
+ic                  0.000 
+
+
+
+Operating Point for Devices of Type Resistor
+============================================
+Instance:                R1            RI            RB
+V                    0.000         0.000        -1.399u
+Power DC Terms:
+PD                   0.000         0.000         0.083f
+
+DC Pin Currents:
+Ir                   0.000         0.000       -59.250p
+
+Device Variables:
+tc1                  0.000         0.000         0.000 
+tc2                  0.000         0.000         0.000 
+
+
+
+Operating Point for Devices of Type Inductor
+============================================
+Instance:                L1
+V                    0.000 
+Power DC Terms:
+PS                   0.000 
+
+DC Pin Currents:
+Il                   0.000 
+
+Device Variables:
+ic                   0.000 
+
+
+
+Operating Point for Devices of Type Capacitor
+=============================================
+Instance:                C1            CP
+V                    0.000        -7.000 
+Power DC Terms:
+PS                   0.000         0.000 
+
+DC Pin Currents:
+Ic                   0.000         0.000 
+
+Device Variables:
+ic                   0.000         0.000 
+
+
+
+Operating Point for Devices of Type SPICE Source
+================================================
+Instance:               V1            VB
+V                   0.000         7.000 
+Power DC Terms:
+PG                  0.000       414.750p
+
+DC Pin Currents:
+ISource             0.000       -59.250p
+
+
+
+*****************************************************
+***                     Run=1                     ***
+***                Temperature=27                 ***
+***                     VB=8                      ***
+*****************************************************
+
+Run=1 Temperature=27 VB=8
+
+DC Operating Point Voltages
+===========================
+Node         Voltage  Node         Voltage  Node         Voltage 
+1            -7.998   2             0.000   3            -8.000  
+4             0.000   5             0.000  
+
+DC Operating Point Inductor Current
+===================================
+Inductor     Current 
+L1            0.000  
+
+
+Operating Point for Devices of Type Diode
+=========================================
+Instance:               D1
+Using model:         D815V
+
+Capacitance Terms:
+CAP                35.737p
+
+Current Terms:
+ID                -72.217n
+
+Resistance Terms:
+REQ               659.541K
+
+Voltage Terms:
+VD                 -7.998 
+
+Power DC Terms:
+PD                577.610n
+PS                  0.000 
+
+DC Pin Currents:
+Id                -72.217n
+
+Condition:
+State                ZENER
+
+Device Variables:
+area                1.000 
+ic                  0.000 
+
+
+
+Operating Point for Devices of Type Resistor
+============================================
+Instance:                R1            RI            RB
+V                    0.000         0.000        -1.706m
+Power DC Terms:
+PD                   0.000         0.000       123.166p
+
+DC Pin Currents:
+Ir                   0.000         0.000       -72.217n
+
+Device Variables:
+tc1                  0.000         0.000         0.000 
+tc2                  0.000         0.000         0.000 
+
+
+
+Operating Point for Devices of Type Inductor
+============================================
+Instance:                L1
+V                    0.000 
+Power DC Terms:
+PS                   0.000 
+
+DC Pin Currents:
+Il                   0.000 
+
+Device Variables:
+ic                   0.000 
+
+
+
+Operating Point for Devices of Type Capacitor
+=============================================
+Instance:                C1            CP
+V                    0.000        -7.998 
+Power DC Terms:
+PS                   0.000         0.000 
+
+DC Pin Currents:
+Ic                   0.000         0.000 
+
+Device Variables:
+ic                   0.000         0.000 
+
+
+
+Operating Point for Devices of Type SPICE Source
+================================================
+Instance:               V1            VB
+V                   0.000         8.000 
+Power DC Terms:
+PG                  0.000       577.733n
+
+DC Pin Currents:
+ISource             0.000       -72.217n
+
+
