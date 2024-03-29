@@ -1,0 +1,10 @@
+PTRACE_GETREGS failed: Нет такого процесса
+PTRACE_GETFPREGS failed: Нет такого процесс
+
+sudo apt-get remove --auto-remove edb-debugger
+sudo apt-get install edb-debugger
+sudo apt install xterm -y
+
+sudo apt-get remove --auto-remove edb-debugger
+sudo apt-get purge edb-debugger
+sudo apt-get purge --auto-remove edb-debugge
