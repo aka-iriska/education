@@ -1,4 +1,0 @@
-﻿  Source.cpp
-H:\ооп\лабы\lab6\lab6\lab6\Source.cpp(40,18): warning C4101: ptr1: неиспользованная локальная переменная
-H:\ооп\лабы\lab6\lab6\lab6\Source.cpp(40,26): warning C4101: ptr2: неиспользованная локальная переменная
-  lab6.vcxproj -> H:\ооп\лабы\lab6\lab6\x64\Debug\lab6.exe
