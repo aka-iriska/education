@@ -1,3 +1,0 @@
-﻿  Source.cpp
-H:\ооп\лабы\lab7\lab7a\lab7a\Source.cpp(21,12): warning C4244: инициализация: преобразование "int" в "float", возможна потеря данных
-  lab7a.vcxproj -> H:\ооп\лабы\lab7\lab7a\x64\Debug\lab7a.exe
